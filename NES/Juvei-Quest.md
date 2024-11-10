@@ -1,22 +1,108 @@
 # Juvei (Jubei) Quest
 
-Memory Addresses: 
+## Various:
 
-Various:
-
-| Address | Value |
-| --- | --- |
-| 0503 | Gold |
-
-Character Attributes:
-
-
-| Address | Value | Notes
+| Address | Modifies | Notes
 | --- | --- | --- |
-| 0538 | Jubei's Level | Character level defines attribute values, arts/skills, and EXP cap
-| 053A | Ryume's Level | Character level defines attribute values, arts/skills, and EXP cap
+| 0503 | Gold Amount | Main Quest Currency
+| 050C | Peach Amount | Side Quest Currency
+
+## Character Attributes:
+
+### Jubei:
+| Address | Modifies | Notes
+| --- | --- | --- |
+| 0538 | Level | Character level defines attribute values, arts/skills, and EXP cap
+| | Current HP |
+| | Max HP |
+| | Current AP |
+| | Max AP |
+| | Experience |
+| | Condition |
+| | Attack |
+| | Defense |
+| | Speed |
+| | Luck |
+| | Spirit
+
+### Ryume:
+| Address | Modifies | Notes
+| --- | --- | --- |
+| 053A | Level | Character level defines attribute values, arts/skills, and EXP cap
+| | Current HP |
+| | Max HP |
+| | Current AP |
+| | Max AP |
+| | Experience |
+| | Condition |
+| | Attack |
+| | Defense |
+| | Speed |
+| | Luck |
+| | Spirit
+
+### Onitan:
+| Address | Modifies | Notes
+| --- | --- | --- |
+| 053C | Level |
+| 0564 | Current HP |
+| 05A4 | Max HP |
+| 0565 | Shiro's Current HP | Reverts to level defeault as soon as you open the Stats screen
+| 0574 | Current AP |
+|  | Max AP |
+|  | Experience |
+|  | Condition |
+|  | Attack |
+|  | Defense |
+|  | Speed |
+|  | Luck |
+|  | Spirit
+
+### Shiro:
+| Address | Modifies | Notes
+| --- | --- | --- |
+|  | Level |
+|  | Current HP |
+|  | Max HP |
+|  | Shiro's Current HP |
+|  | Current AP |
+|  | Max AP |
+|  | Experience |
+|  | Condition |
+|  | Attack |
+|  | Defense |
+|  | Speed |
+|  | Luck |
+|  | Spirit
 
 
+| Address | Modifies | Notes
+| --- | --- | --- |
+| 053C | Onitan's Level |
+| 053D | Shiro's Level |
+| 053E | Feeny's Level |
+|  |
+|  | Onitan's Current HP |
+|  | Onitan's Max HP |
+| 05A5 | Shiro
+
+
+
+| Address | Modifies | Notes
+| --- | --- | --- |
+|  | Level |
+|  | Current HP |
+|  | Max HP |
+|  | Shiro's Current HP |
+|  | Current AP |
+|  | Max AP |
+|  | Experience |
+|  | Condition |
+|  | Attack |
+|  | Defense |
+|  | Speed |
+|  | Luck |
+|  | Spirit
 
 ## Things I'd like to find still:
 
