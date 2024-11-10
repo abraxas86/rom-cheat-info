@@ -7,6 +7,14 @@
 | 0503 | Gold Amount | Main Quest Currency
 | 050C | Peach Amount | Side Quest Currency
 
+## Battle Stuff:
+| Address | Modifies | Notes
+|   ---   |    ---   |   ---  |
+| 064C | Something with battle attack animation/timing
+| 064E | Enemy number being attacked (00 = first enemy) | Confirmed not used for the player character being attacked by enemy
+| 064F | Something with battle attack animation/timing
+| 065C | Something with enemy sprite animations during battle
+
 ## Character Attributes:
 
 ### Jubei:
@@ -109,6 +117,13 @@
 |  | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 |  | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 |  | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+
+### Conditions
+| Value   | Status Condition
+|   ---   |    ---   |
+|   | Normal
+|   | Poison
+|   | Paralysis
 
 ## Things I'd like to find still:
 
