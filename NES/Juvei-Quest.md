@@ -3,7 +3,7 @@
 ## Various:
 
 | Address | Modifies | Notes
-| --- | --- | --- |
+|   ---   |    ---   |   ---  |
 | 0503 | Gold Amount | Main Quest Currency
 | 050C | Peach Amount | Side Quest Currency
 
@@ -11,7 +11,7 @@
 
 ### Jubei:
 | Address | Modifies | Notes
-| --- | --- | --- |
+|   ---   |    ---   |   ---  |
 | 0538 | Level | Character level defines attribute values, arts/skills, and EXP cap
 | | Current HP |
 | | Max HP |
@@ -27,7 +27,7 @@
 
 ### Ryume:
 | Address | Modifies | Notes
-| --- | --- | --- |
+|   ---   |    ---   |   ---  |
 | 053A | Level | Character level defines attribute values, arts/skills, and EXP cap
 | | Current HP |
 | | Max HP |
@@ -49,9 +49,9 @@
 | 05A4 | Max HP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 0574 | Current AP  |
 | 05B4 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Experience      |
-|  | Condition       |
-| 05bC | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+|  | Experience  |
+|  | Condition   |
+| 05BC | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05C4 | Defense     | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05CC | Speed       | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05D4 | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
@@ -60,35 +60,37 @@
 
 ### Shiro:
 | Address | Modifies | Notes
-| --- | --- | --- |
-| 053D | Level |
-| 0565 | Current HP |
-| 05A5 | Max HP | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-| 0575 | Current AP |
-| 05B5 | Max AP | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Experience |
-|  | Condition |
-|  | Attack |
-|  | Defense |
-|  | Speed |
-|  | Luck |
-|  | Spirit
+|   ---   |    ---   |   ---  |
+| 053D | Level       |
+| 0565 | Current HP  |
+| 05A5 | Max HP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 0575 | Current AP  |
+| 05B5 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+|  | Experience  |
+|  | Condition   |
+| 05BD | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05C5 | Defense     | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05CD | Speed       | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05D5 | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05DD | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05E5 | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 
 ### Feeny:
 | Address | Modifies | Notes
 | --- | --- | --- |
-| 053E | Feeny's Level |
-| 0566 | Current HP |
-| 05A6 | Max HP | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-| 0576 | Current AP |
-| 05B6 | Max AP | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Experience |
-|  | Condition |
-|  | Attack |
-|  | Defense |
-|  | Speed |
-|  | Luck |
-|  | Spirit
+| 053E | Level       |
+| 0566 | Current HP  |
+| 05A6 | Max HP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 0576 | Current AP  |
+| 05B6 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+|  | Experience  |
+|  | Condition   |
+| 05BE | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05C6 | Defense     | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05CE | Speed       | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05D6 | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05DE | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05E6 | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 
 
 
