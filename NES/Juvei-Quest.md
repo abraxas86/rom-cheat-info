@@ -43,28 +43,29 @@
 
 ### Onitan:
 | Address | Modifies | Notes
-| --- | --- | --- |
-| 053C | Level |
-| 0564 | Current HP |
-| 05A4 | Max HP |
-| 0574 | Current AP |
-|  | Max AP |
-|  | Experience |
-|  | Condition |
-|  | Attack |
-|  | Defense |
-|  | Speed |
-|  | Luck |
-|  | Spirit
+|   ---   |    ---   |   ---  |
+| 053C | Level       |
+| 0564 | Current HP  |
+| 05A4 | Max HP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 0574 | Current AP  |
+| 05B4 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+|  | Experience      |
+|  | Condition       |
+| 05bC | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05C4 | Defense     | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05CC | Speed       | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05D4 | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05DC | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05E4 | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 
 ### Shiro:
 | Address | Modifies | Notes
 | --- | --- | --- |
 | 053D | Level |
 | 0565 | Current HP |
-|  | Max HP |
+| 05A5 | Max HP | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 0575 | Current AP |
-|  | Max AP |
+| 05B5 | Max AP | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 |  | Experience |
 |  | Condition |
 |  | Attack |
@@ -78,9 +79,9 @@
 | --- | --- | --- |
 | 053E | Feeny's Level |
 | 0566 | Current HP |
-|  | Max HP |
+| 05A6 | Max HP | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 0576 | Current AP |
-|  | Max AP |
+| 05B6 | Max AP | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 |  | Experience |
 |  | Condition |
 |  | Attack |
@@ -92,19 +93,20 @@
 
 
 | Address | Modifies | Notes
-| --- | --- | --- |
-|  | Level |
-|  | Current HP |
-|  | Max HP |
-|  | Current AP |
-|  | Max AP |
-|  | Experience |
-|  | Condition |
-|  | Attack |
-|  | Defense |
-|  | Speed |
-|  | Luck |
-|  | Spirit
+|   ---   |    ---   |   ---  |
+|  | Level       |
+|  | Current HP  |
+|  | Max HP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+|  | Current AP  |
+|  | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+|  | Experience  |
+|  | Condition   |
+|  | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+|  | Defense     | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+|  | Speed       | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+|  | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+|  | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+|  | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 
 ## Things I'd like to find still:
 
