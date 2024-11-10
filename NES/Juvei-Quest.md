@@ -10,10 +10,11 @@
 ## Battle Stuff:
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
-| 064C | Something with battle attack animation/timing
+| 064C | Something with battle attack animation/timing  | Might be a boolean indicator that a player character is actively attacking an enemy?  Flips to 01 when ATK ART used against enemy. Flips to 01 when DEBUFF ART used against enemy. Stays 00 when BUFF ART used on own team 
 | 064E | Enemy number being attacked (00 = first enemy) | Confirmed not used for the player character being attacked by enemy
 | 064F | Something with battle attack animation/timing
 | 065C | Something with enemy sprite animations during battle
+
 
 ## Character Attributes:
 
@@ -129,6 +130,9 @@
 
 - Attack/Defense etc are only checked when entering a battle and if any stat buff/debuff spells are used.  They are not read each turn, so if you nerf your character stats, have fun with that until you can freeze in a value and cast a buff on yourself (or get the enemy to try to debuff you) to force a re-read of the address.
 
+- If you target a spot where you already killed the enemy (via `0x064E`), it will cause the sprite to appear back on screen.  You can then attack that monster again and kill it, which will add to the counter of defeated monsters.  Thus, you could "respawn" a weak enemy and keep attacking it, which will end the battle as if you killed it and the stronger ones.
+
+- Changing the value at `064E` will change the monster that receives the effects of the attack, despite the monster that your character is in front of.  The battle animation will continue to play out for that monster, too.
 
 ## Things I'd like to find still:
 
