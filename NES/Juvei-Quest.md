@@ -125,6 +125,11 @@
 |   | Poison
 |   | Paralysis
 
+## Notes:
+
+- Attack/Defense etc are only checked when entering a battle and if any stat buff/debuff spells are used.  They are not read each turn, so if you nerf your character stats, have fun with that until you can freeze in a value and cast a buff on yourself (or get the enemy to try to debuff you) to force a re-read of the address.
+
+
 ## Things I'd like to find still:
 
 **Individual character EXP**  
