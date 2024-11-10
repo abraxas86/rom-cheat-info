@@ -7,13 +7,22 @@
 | 0503 | Gold Amount | Main Quest Currency
 | 050C | Peach Amount | Side Quest Currency
 
+## Map Party Location info
+| Address | Modifies | Notes
+|   ---   |    ---   |   ---  |
+| 05E8 - 05EA | This has something to do with the formation of your party. | `0x6C` `0x6C` `0x6C` when party is 3x horizontal
+| 05EC - 05EF    | Something to do with Y-coordinate distance between party and NPCs
+| 05F8 | Used when `FLIRT`ing and `SCOUT`ing.  Tracks Y-distance from main hero.  If you freeze this value, the main hero moves vertically instead of being locked into place.  You can still `TALK` to the empty spot where the hero should be to return to normal. | Will self-correct as soon as you un-freeze the value and move your character up/down 1 unit.
+| 05FA | Same as 05F8, but for the other non-controlled character during that should be locked into place.
+
 ## Battle Stuff:
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
 | 064C | Something with battle attack animation/timing  | Might be a boolean indicator that a player character is actively attacking an enemy?  Flips to 01 when ATK ART used against enemy. Flips to 01 when DEBUFF ART used against enemy. Stays 00 when BUFF ART used on own team 
 | 064E | Enemy number being attacked (00 = first enemy) | Confirmed not used for the player character being attacked by enemy
-| 064F | Something with battle attack animation/timing
-| 065C | Something with enemy sprite animations during battle
+| 064D | Enemy visibility? | Seems to stick to 0x80 and self-correct to that value if changed.  If frozen to another value, enemy sprite will disappear when hit.
+| 064F | Something with battle attack animation/timing  | Flips 00/01 several times per attack phase.
+| 065C | Something with enemy sprite animations during battle | Flips between 00 and 02, looks like it may have something to do with ending turn cycles?
 
 
 ## Character Attributes:
