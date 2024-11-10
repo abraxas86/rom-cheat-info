@@ -47,7 +47,6 @@
 | 053C | Level |
 | 0564 | Current HP |
 | 05A4 | Max HP |
-| 0565 | Shiro's Current HP | Reverts to level defeault as soon as you open the Stats screen
 | 0574 | Current AP |
 |  | Max AP |
 |  | Experience |
@@ -61,11 +60,26 @@
 ### Shiro:
 | Address | Modifies | Notes
 | --- | --- | --- |
-|  | Level |
-|  | Current HP |
+| 053D | Level |
+| 0565 | Current HP |
 |  | Max HP |
-|  | Shiro's Current HP |
-|  | Current AP |
+| 0575 | Current AP |
+|  | Max AP |
+|  | Experience |
+|  | Condition |
+|  | Attack |
+|  | Defense |
+|  | Speed |
+|  | Luck |
+|  | Spirit
+
+### Feeny:
+| Address | Modifies | Notes
+| --- | --- | --- |
+| 053E | Feeny's Level |
+| 0566 | Current HP |
+|  | Max HP |
+| 0576 | Current AP |
 |  | Max AP |
 |  | Experience |
 |  | Condition |
@@ -76,24 +90,12 @@
 |  | Spirit
 
 
-| Address | Modifies | Notes
-| --- | --- | --- |
-| 053C | Onitan's Level |
-| 053D | Shiro's Level |
-| 053E | Feeny's Level |
-|  |
-|  | Onitan's Current HP |
-|  | Onitan's Max HP |
-| 05A5 | Shiro
-
-
 
 | Address | Modifies | Notes
 | --- | --- | --- |
 |  | Level |
 |  | Current HP |
 |  | Max HP |
-|  | Shiro's Current HP |
 |  | Current AP |
 |  | Max AP |
 |  | Experience |
