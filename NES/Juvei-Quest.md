@@ -30,34 +30,36 @@
 ### Jubei:
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
-| 0538 | Level | Character level defines attribute values, arts/skills, and EXP cap
-| | Current HP |
-| | Max HP |
-| | Current AP |
-| | Max AP |
-| | Experience |
-| | Condition |
-| | Attack |
-| | Defense |
-| | Speed |
-| | Luck |
-| | Spirit
+| 0538 | Level       | Character level defines attribute values, arts/skills, and EXP cap
+| 0560 | Current HP  | 0568: HP Overflow (Increments by 0x01 each time 0x0506 > 0xFF) 
+|  | Max HP          |
+| 0570 | Current AP  |
+|  | Max AP          |
+|  | Experience      |
+|  | Condition       |
+| 0598 | Kenpo Dan   |
+| 05B8 | Attack      |
+| 05C0 | Defense     |
+| 05C8 | Speed       |
+| 05D0 | Luck        |
+| 05D8 | Spirit      |
+| 05E0 | Wisdom      |
 
 ### Ryume:
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
 | 053A | Level | Character level defines attribute values, arts/skills, and EXP cap
-| | Current HP |
-| | Max HP |
-| | Current AP |
-| | Max AP |
-| | Experience |
-| | Condition |
-| | Attack |
-| | Defense |
-| | Speed |
-| | Luck |
-| | Spirit
+| 0562 | Current HP  | 0x056A: HP Overflow (Increments by 0x01 each time 0x0562 > 0xFF) 
+|  | Max HP          |
+| 0572 | Current AP  |
+| 05B2 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level 
+|  | Experience      | 
+|  | Condition       |
+|  | Attack          | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+|  | Defense         | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+|  | Speed           | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+|  | Luck            | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+|  | Spirit          | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 
 ### Onitan:
 | Address | Modifies | Notes
