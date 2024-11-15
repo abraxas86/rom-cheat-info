@@ -31,35 +31,39 @@
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
 | 0538 | Level       | Character level defines attribute values, arts/skills, and EXP cap
-| 0560 | Current HP  | 0568: HP Overflow (Increments by 0x01 each time 0x0506 > 0xFF) 
-|  | Max HP          |
+| 0560 | Current HP  |
+| 0568 | HP Overflow | Increments by 0x01 each time 0x0506 > 0xFF
+| 05A0 | Max HP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05A8 | Max HP Overflow | Increments by 0x01 when 0x05A0 is > 0xFF
 | 0570 | Current AP  |
-|  | Max AP          |
+| 05B0 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 |  | Experience      |
-|  | Condition       |
-| 0598 | Kenpo Dan   |
-| 05B8 | Attack      |
-| 05C0 | Defense     |
-| 05C8 | Speed       |
-| 05D0 | Luck        |
-| 05D8 | Spirit      |
-| 05E0 | Wisdom      |
+| 055A | Condition   |
+| 0598 | Kenpo Dan   | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05B8 | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05C0 | Defense     | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05C8 | Speed       | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05D0 | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05D8 | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05E0 | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 
 ### Ryume:
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
 | 053A | Level | Character level defines attribute values, arts/skills, and EXP cap
-| 0562 | Current HP  | 0x056A: HP Overflow (Increments by 0x01 each time 0x0562 > 0xFF) 
-|  | Max HP          |
+| 0562 | Current HP  | 
+| 056A | HP Overflow | Increments by 0x01 each time 0x0562 > 0xFF
+| 05A2 | Max HP      | 
+| 05AA | Max HP Overflow | Increments by 0x01 when 0x05A2 is > 0xFF
 | 0572 | Current AP  |
 | 05B2 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level 
 |  | Experience      | 
 |  | Condition       |
-|  | Attack          | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Defense         | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Speed           | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Luck            | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Spirit          | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05BA | Attack          | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05C2 | Defense         | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05CA | Speed           | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05D2 | Luck            | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05DA | Spirit          | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 
 ### Onitan:
 | Address | Modifies | Notes
@@ -131,11 +135,17 @@
 |  | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 
 ### Conditions
-| Value   | Status Condition
+| Value   | Status Condition | Notes
 |   ---   |    ---   |
-|   | Normal
-|   | Poison
-|   | Paralysis
+| 0x00 | Normal | |
+| 0x01 | Sleep | |
+| 0x02 | Freeze | | 
+| 0x03 | Not used, corrupted | |
+| 0x04 | Curse | |
+| 0x04 | Seal | |
+| 0x06 | Sick | |
+| 0x07 | Poison | |
+| 0x08 | Puts sprite next to status | 
 
 ## Notes:
 
