@@ -142,7 +142,7 @@
 | 0x02 | Freeze | | 
 | 0x03 | Not used, corrupted | ![Corrupted status](images/Juvei-Quest/juvei-condition-0x03.png) |
 | 0x04 | Curse | |
-| 0x04 | Seal | |
+| 0x05 | Seal | |
 | 0x06 | Sick | |
 | 0x07 | Poison | |
 | 0x08 | Puts red dude sprite next to status | ![Red dude sprite](images/Juvei-Quest/juvei-condition-0x08.png) |
