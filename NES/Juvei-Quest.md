@@ -38,7 +38,7 @@
 | 0570 | Current AP  |
 | 05B0 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 |  | Experience      |
-| 055A | Condition   |
+| 0558 | Condition   |
 | 0598 | Kenpo Dan   | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05B8 | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05C0 | Defense     | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
@@ -58,7 +58,7 @@
 | 0572 | Current AP  |
 | 05B2 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level 
 |  | Experience      | 
-|  | Condition       |
+| 055A | Condition       |
 | 05BA | Attack          | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05C2 | Defense         | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05CA | Speed           | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
@@ -135,17 +135,19 @@
 |  | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 
 ### Conditions
-| Value   | Status Condition | Notes
-|   ---   |    ---   |
+| Value   | Status Condition | Notes |
+|   ---   |  --------------  |  ---  |
 | 0x00 | Normal | |
 | 0x01 | Sleep | |
 | 0x02 | Freeze | | 
-| 0x03 | Not used, corrupted | |
+| 0x03 | Not used, corrupted | ![Corrupted status](images/Juvei-Quest/juvei-condition-0x03.png) |
 | 0x04 | Curse | |
 | 0x04 | Seal | |
 | 0x06 | Sick | |
 | 0x07 | Poison | |
-| 0x08 | Puts sprite next to status | 
+| 0x08 | Puts red dude sprite next to status | ![Red dude sprite](images/Juvei-Quest/juvei-condition-0x08.png) |
+| 0x09 | Puts ghost sprite next to status | ![Ghost sprite](images/Juvei-Quest/juvei-condition-0x09.png)
+| 0x0A | 0x0A and on appear to all be corrupted statuses | ![Corrupted status](images/Juvei-Quest/juvei-condition-0x0A.png) ![Corrupted status](images/Juvei-Quest/juvei-condition-0x0B.png)
 
 ## Notes:
 
