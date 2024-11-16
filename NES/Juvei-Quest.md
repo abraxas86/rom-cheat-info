@@ -163,25 +163,84 @@
 | | | The rest are invalid status bytes |
 | 0x0A | 0x0A and on appear to all be corrupted statuses | ![Corrupted status](images/Juvei-Quest/juvei-condition-0x0A.png) ![Corrupted status](images/Juvei-Quest/juvei-condition-0x0B.png)
 
+
 ## Inventory Items
-|  Value  |    Item    | |  Value  |    Item    | |  Value  |    Item    | |  Value  |    Item    | |  Value  |    Item    |
-|   ---   |  --------  |-|   ---   |  --------  |-|   ---   |  --------  |-|   ---   |  --------  |-|   ---   |  --------  |
-| 00 | Empty Slot      | | 10 | Cosmotron       | | 20 | Atlas           | | 30 | Old  Fang 3     | | 40 |
-| 01 | Scroll Box      | | 11 | Viper Orb       | | 21 | Atlas           | | 31 | Old Armor 2     | | 41 |
-| 02 | 10              | | 12 | Fire Feather    | | 22 | Undecided 34    | | 32 | Old Armor 3     | | 42 |
-| 03 | Daifuku         | | 13 | Dodonkey        | | 23 | Norn's Tear     | | 33 | Adult Magazine  | | 43 |
-| 04 | 50 pb           | | 14 | Fried Tofu      | | 24 | Fire Sake       | | 34 | Blue Book       | | 44 |
-| 05 | 100 pb          | | 15 | "Zippo" Oil     | | 25 | Baldonite       | | 35 | Crystal Ball    | | 45 |
-| 06 | Old Fang 2      | | 16 | Burnt Grass     | | 26 | Yawny Mukkuri   | | 36 | Teardrop        | | 46 |
-| 07 | Old Armor 1     | | 17 | Undecided 23    | | 27 | Baldon Burst    | | 37 | Undecided 55    | | 47 |
-| 08 | Snow Gun        | | 18 | E-Interpreter   | | 28 | Ancient Flame   | | 38 | Golden Shell    | | 48 |
-| 09 | 500 pb          | | 19 | Dark Hammer     | | 29 | Iron Pipe       | | 39 | Teleport Stone  | | 49 |
-| 0A | 1000 pb         | | 1A | Trampoline      | | 2A | Occulton        | | 3A | Missile Pod     | | 4A |
-| 0B | Gold Coin       | | 1B | Bean Sprout     | | 2B | Ancient Gun     | | 3B | Palm Rocket     | | 4B |
-| 0C | Undecided 12    | | 1C | Bingbing        | | 2C | Ancient ?       | | 3C | Old Fang 1      | | 4C |
-| 0D | Bagra Seed      | | 1D | Sandblalst Lamp | | 2D | Undefined 45    | | 3D | Old Collar      | | 4D |
-| 0E | Ath Staff       | | 1E | Foliage Set     | | 2E | Doll Key        | | 3E | Old Fang 4      | | 4E |
-| 0F | Gain Burst      | | 1F | Megaton Coin    | | 2F | Sealing Sphere  | | 3F | Dragon Orb      | | 4F |
+|  Value  |    Item    | |  Value  |    Item    | |  Value  |    Item    | |  Value  |    Item    |
+|   ---   |  --------  |-|   ---   |  --------  |-|   ---   |  --------  |-|   ---   |  --------  |
+| 00 | Empty Slot      | | 10 | Cosmotron       | | 20 | Atlas           | | 30 | Old  Fang 3     |
+| 01 | Scroll Box      | | 11 | Viper Orb       | | 21 | Atlas           | | 31 | Old Armor 2     |
+| 02 | 10              | | 12 | Fire Feather    | | 22 | Undecided 34    | | 32 | Old Armor 3     |
+| 03 | Daifuku         | | 13 | Dodonkey        | | 23 | Norn's Tear     | | 33 | Adult Magazine  |
+| 04 | 50 pb           | | 14 | Fried Tofu      | | 24 | Fire Sake       | | 34 | Blue Book       |
+| 05 | 100 pb          | | 15 | "Zippo" Oil     | | 25 | Baldonite       | | 35 | Crystal Ball    |
+| 06 | Old Fang 2      | | 16 | Burnt Grass     | | 26 | Yawny Mukkuri   | | 36 | Teardrop        |
+| 07 | Old Armor 1     | | 17 | Undecided 23    | | 27 | Baldon Burst    | | 37 | Undecided 55    |
+| 08 | Snow Gun        | | 18 | E-Interpreter   | | 28 | Ancient Flame   | | 38 | Golden Shell    |
+| 09 | 500 pb          | | 19 | Dark Hammer     | | 29 | Iron Pipe       | | 39 | Teleport Stone  |
+| 0A | 1000 pb         | | 1A | Trampoline      | | 2A | Occulton        | | 3A | Missile Pod     |
+| 0B | Gold Coin       | | 1B | Bean Sprout     | | 2B | Ancient Gun     | | 3B | Palm Rocket     |
+| 0C | Undecided 12    | | 1C | Bingbing        | | 2C | Ancient ?       | | 3C | Old Fang 1      |
+| 0D | Bagra Seed      | | 1D | Sandblalst Lamp | | 2D | Undefined 45    | | 3D | Old Collar      |
+| 0E | Ath Staff       | | 1E | Foliage Set     | | 2E | Doll Key        | | 3E | Old Fang 4      |
+| 0F | Gain Burst      | | 1F | Megaton Coin    | | 2F | Sealing Sphere  | | 3F | Dragon Orb      |
+
+|  Value  |    Item    | |  Value  |    Item    | |  Value  |    Item    | |  Value  |    Item    |
+|   ---   |  --------  |-|   ---   |  --------  |-|   ---   |  --------  |-|   ---   |  --------  |
+| 40 | Return Orb      | | 50 | Pharoa Key      | | 60 | Undecided 96    | | 70 | Lightning Rod   |
+| 41 | Undecided 65    | | 51 | Cold Key        | | 61 | Undecided 97    | | 71 | Makibishi       |
+| 42 | Herb            | | 52 | Manju           | | 62 | Oni Tear        | | 72 | Undecided       |
+| 43 | Antidote        | | 53 | Chocolate       | | 63 | Wedding Gift    | | 73 | Golden Diamond  |
+| 44 | Elixir          | | 54 | Undecided 84    | | 64 | Throttle Ball   | | 74 | Crazy Gas       |
+| 45 | Burn Cure       | | 55 | Dynamite Sake   | | 65 | Golden Orb      | | 75 | Ancient Metal   |
+| 46 | Pip             | | 56 | Sake            | | 66 | Machine Gun     | | 76 | Fullmetal Bomb  |
+| 47 | Reviver         | | 57 | Plum Sake       | | 67 | Snow Machine    | | 77 | Smoke Bomb      |
+| 48 | All-Reviver     | | 58 | Para Beer       | | 68 | Molotov         | | 78 | Undecided       |
+| 49 | Dungeon Key     | | 59 | Sake Barrel     | | 69 | Fireball        | | 79 | Shocker         |
+| 4A | Jail Key        | | 5A | Cursed Key      | | 6A | Flamethrower    | | 7A | Bird Lime       |
+| 4B | Eel Key         | | 5B | Reed Flute      | | 6B | Cannon          | | 7B | Laughing Gas    |
+| 4C | Shell Key       | | 5C | Bat Flute       | | 6C | Bazooka         | | 7C | Smoky Gas       |
+| 4D | Bat Key         | | 5D | Gohei Cake      | | 6D | Earth Hammer    | | 7D | Oni Drum        |
+| 4E | Undefined 78    | | 5E | Ice Mint        | | 6E | Aqua Gun        | | 7E | Ice Bowl        |
+| 4F | Cigarette       | | 5F | Gatling Gun     | | 6F | Stun Gun        | | 7F | Ice Harp        |
+
+|  Value  |    Item    | |  Value  |    Item    | |  Value  |    Item    | |  Value  |    Item    |
+|   ---   |  --------  |-|   ---   |  --------  |-|   ---   |  --------  |-|   ---   |  --------  |
+| 80 | Undecided       | | 90 | Shinkage        | | A0 | Hibagon Suit    | | B0 | Cloudy Sword    |
+| 81 | Undecided       | | 91 | Mursame         | | A1 | Thunder Plate   | | B1 | Mountain Spear  |
+| 82 | Undecided       | | 92 | Yama Arashi     | | A2 | Carver Sword    | | B2 | Serene Sword    |
+| 83 | Baramos         | | 93 | Unryu           | | A3 | Yamabushi Cane  | | B3 | Scimitar        |
+| 84 | Gamellun        | | 94 | Mesamune        | | A4 | Ivory Knife     | | B4 | Commoner        |
+| 85 | Fencer          | | 95 | Laser Sword     | | A5 | Sengoku Sword   | | B5 | Ninja           |
+| 86 | Aurora Guard    | | 96 | Shinobi Katana  | | A6 | Eagre Sword     | | B6 | Thorny Pads     |
+| 87 | Chain Collar    | | 97 | Battle Surcoat  | | A7 | Naginata        | | B7 | Holy Plate      |
+| 88 | Ogre Fang       | | 98 | Shinobi Cloth   | | A8 | Fang Spear      | | B8 | Mameluke        |
+| 89 | Ice Blade       | | 99 | Chain Mail      | | A9 | Ivory Katana    | | B9 | Musashi         |
+| 8A | Pyramid Sword   | | 9A | Shinobi Armor   | | AA | Crying Sword    | | BA | Idaten          |
+| 8B | Campo Cane      | | 9B | Ripple Plate    | | AB | Cement Grout    | | BB | Genghis Khan    |
+| 8C | Hightech Sword  | | 9C | Whirling Plate  | | AC | Yamata Sword    | | BC | Marfia          |
+| 8D | Iron Spear      | | 9D | Rose Armor      | | AD | Smashing Fang   | | BD | Health          |
+| 8E | Ultimate Fnag   | | 9E | Purple Hood     | | AE | Falcon Plate    | | BE | Oni Claw        |
+| 8F | Short Sword     | | 9F | Aster Armor     | | AF | Breaking Fang   | | BF | Oni Fang        |
+
+|  Value  |    Item    | |  Value  |    Item    | |  Value  |    Item    | |  Value  |    Item    |
+|   ---   |  --------  |-|   ---   |  --------  |-|   ---   |  --------  |-|   ---   |  --------  |
+| C0 | Ancient Icicle  | | D0 | Thunder Sword   | | E0 | Red Hood        | | F0 | Warden          |
+| C1 | Heavy Log       | | D1 | Ryozan Sword    | | E1 | Battle Armor    | | F1 | Hermit          |
+| C2 | Blunt Club      | | D2 | Metal Spear     | | E2 | Mink Suit       | | F2 | Immortal        |
+| C3 | Club            | | D3 | Golden Sword    | | E3 | Alpha Oil       | | F3 | Maitreya        |
+| C4 | Oni Collar      | | D4 | Glacier Sword   | | E4 | Metal Armor     | | F4 | Guardian        |
+| C5 | Leather Collar  | | D5 | Dragon Spear    | | E5 | Branded Suit    | | F5 | Cosmos          |
+| C6 | Tiger Pants     | | D6 | Shiranui        | | E6 | Golden Cross    | | F6 | Dreamer         |
+| C7 | Blade Wing      | | D7 | Aura Blade      | | E7 | Princess Dress  | | F7 | Ice Pick        |
+| C8 | Valor Pants     | | D8 | Steel Fang      | | E8 | Last Armor      | | F8 | Charm Cane      |
+| C9 | Headgear        | | D9 | Edomae Sword    | | E9 | Plasma Oil      | | F9 | Ice Cutter      |
+| CA | Flame Wing      | | DA | Ceramic Club    | | EA | Dragon Suit     | | FA | Glacier Cane    |
+| CB | Nyoi Staff      | | DB | Ath Spear       | | EB | Hyper Suit      | | FB | Tuxedo          |
+| CC | Red Fundoshi    | | DC | Titan Pillar    | | EC | Iron Collar     | | FC | Aurora Suit     |
+| CD | Gold Fundoshi   | | DD | Chinese Dress   | | ED | Zeus            | | FD | Charm Clothes   |
+| CE | Huge Club       | | DE | Carbon Suit     | | EE | Iron            | | FE | Ice Clothes     |
+| CF | Stone Head      | | DF | Dragon Clothes  | | EF | Tyson           | | FF | Empty Slot      |
+
 
 
 ## Inventory Notes
@@ -190,7 +249,8 @@
 |   ---   |  --------------  |  ---  |
 | 02 | 10 | Not really sure what this item is about
 | 04, 05, 09, 0A | "pb" items  | Corrupt/invalid item of some sort
-| 0C | Undecided 12 | Not sure if this is something the translation team was confused about and just left as-is?
+| 0C | Undecided 12 | Not sure if this is something the translation team was confused about and just left as-is?  The number seems to correlate to the decimal value of their hex value
+| 2D | Undefined 45 | There are 2 "Undefined" items amidst the Undecided items.  Not sure why.
 | 20 | Atlas | 
 | 21 | Atlas | "This can't be used here" (Onitan)
 
