@@ -3,12 +3,31 @@
 ## Various:
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
+| 0500 | Main Quest Slot 1 Character Status Pointer | This value seems to point to the spot in memory to get the character attributes + sprite for the STATUS screen
+| 0501 | Main Quest Slot 2 Character Status Pointer | This value seems to point to the spot in memory to get the character attributes + sprite for the STATUS screen
+| 0504 | Side-Quest Slot 1 Character Status Pointer | This value seems to point to the spot in memory to get the character attributes + sprite for the STATUS screen
+| 0505 | Side-Quest Slot 2 Character Status Pointer | This value seems to point to the spot in memory to get the character attributes + sprite for the STATUS screen
+| 0506 | Side-Quest Slot 3 Character Status Pointer | This value seems to point to the spot in memory to get the character attributes + sprite for the STATUS screen
 | 0510 | Character Menu (A on Overworld) Slot 1
 | 0512 | Character Menu (A on overworld) Slot 2 | Changing this value also gives you access to their inventory. The inventory will update on up/down, but the name won't update until you go in/out of the name menu or an inventory.
 | 0514 | Sidequest Character Menu Slot 1 
 | 0515 | Sidequest Character Menu Slot 2
 | 0516 | Sidequest Character Menu Slot 3
 | 05FC | Sound/Music Trigger | If a song is playing (ie: 0x90) you can change to a sound (ie: 0x01) and it will play both.
+
+## 0x0500 - 0x0506 Values (assuming default names)
+| Byte | Value |
+| ---  |  ---  |
+| 00 | Jubei   |
+| 01 | Corrupt Value |
+| 02 | Ryume   |
+| 03 | Sabu    |
+| 04 | Onitan  |
+| 05 | Shiro   |
+| 06 | Feeny   |
+| 07 | Corrupt Value |
+| 08 | >=0x08 will set Jubei |
+| | Setting a character in the wrong "world" will show a corrupt sprite
 
 ## 0x0510 & 0x0512 Values (assuming default names)
 | Byte | Value | | Byte | Value   | Notes |
@@ -59,6 +78,7 @@
 | 05B0 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 0540 | Experience  |
 | 0548 | Experience Overflow | Increments by 0x01 every time 0x0540 > 0xFF
+| 0550 | Experience Overflow Overflow | Increments 0x01 every time 0x0548 > 0XFF
 | 0558 | Condition   |
 | 0598 | Kenpo Dan   | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05B8 | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
@@ -70,6 +90,7 @@
 | 0578 | Equipped Weapon | Equipping any weapon/armour will adjust ATK. Equipping anything else will drop to base value.
 | 0580 | Equipped Armour | Equipping any weapon/armour will adjust DEF. Equipping anything else will drop to base value.
 | 0588 | Equipped Class  | Equipping any class will adjust stats. Equipping anything else will drop to base value.
+|  | 
 | | |
 | 1B00 - 1B06 | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
 | 0B06 - 0B0B | Dodonkey Slots 1 through 5
@@ -85,7 +106,8 @@
 | 0572 | Current AP  |
 | 05B2 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level 
 | 0542 | Experience      | 
-| 054A | Experience Overflow | Increments by 0x01 every time 0x0542 > 0x FF
+| 054A | Experience Overflow | Increments by 0x01 every time 0x0542 > 0xFF
+| 0552 | Experience Overflow Overflow | Increments by 0x01 each time 0x54A > 0xFF
 | 055A | Condition       |
 | 05BA | Attack          | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05C2 | Defense         | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
@@ -95,6 +117,7 @@
 | 0569 | Equipped Weapon | Equipping any weapon/armour will adjust ATK. Equipping anything else will drop to base value.
 | 0582 | Equipped Armour | Equipping any weapon/armour will adjust DEF. Equipping anything else will drop to base value.
 | 058A | Equipped Class  | Equipping any class will adjust stats. Equipping anything else will drop to base value.
+| 059A | Race |
 | | |
 | 131A - 1320 | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
 | 1321 - 1325 | Dodonkey Slots 1 through 5
@@ -122,8 +145,6 @@
 | 058C | Equipped Class  | Equipping any class will adjust stats. Equipping anything else will drop to base value.
 | | |
 | 0334 - 033A | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
-
-
 
 ### Shiro:
 | Address | Modifies | Notes
@@ -171,6 +192,12 @@
 | | |
 | 034E - 0354 | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
 
+## Character Races
+| Value   | Race | Notes |
+|   ---   |  --------------  |  ---  |
+| 00 | ???
+| 01 | ???
+| 02 | Dragon | Anything >01 sets "Dragon"
 
 ## Conditions
 | Value   | Status Condition | Notes |
