@@ -3,8 +3,24 @@
 ## Various:
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
+| 0510 | Character Menu (A on Overworld) Slot 1
+| 0512 | Character Menu (A on overworld) Slot 2 | Changing this value also gives you access to their inventory. The inventory will update on up/down, but the name won't update until you go in/out of the name menu or an inventory.
+| 0514 | Sidequest Character Menu Slot 1 
+| 0515 | Sidequest Character Menu Slot 2
+| 0516 | Sidequest Character Menu Slot 3
 | 05FC | Sound/Music Trigger | If a song is playing (ie: 0x90) you can change to a sound (ie: 0x01) and it will play both.
 
+## 0x0510 & 0x0512 Values (assuming default names)
+| Byte | Value | | Byte | Value   | Notes |
+| ---  |  ---  |-| ---  |  ---    | ----- |
+| 00 | Jubei   | | 08 | Penta     | Shares same INV address as Onitan
+| 02 | Wolf    | | 09 | Lucky     | Shares same INV address as Shiro
+| 03 | Ivan    | | 0A | ...T      | Shares same INV address as Feeny
+| 04 | Onitan  | | 0B | Rock      | Shares same INV address as Shiro
+| 05 | Shiro   | | 0C | Tamas     | Shares same INV address as Onitan
+| 06 | Feeny   | | 0D | PqikkuQ L | Corrupt/Invalid nane.  Share same INV slot as Shiro
+| 07 | Saru    | | 0E | ...T      | Shares same INV address as Feeny
+|    |         | | 0F | ...T      | Shares same INV as Feeny
 
 ### Money
 | Address | Modifies | Notes
@@ -56,6 +72,7 @@
 | 0588 | Equipped Class  | Equipping any class will adjust stats. Equipping anything else will drop to base value.
 | | |
 | 1B00 - 1B06 | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
+| 0B06 - 0B0B | Dodonkey Slots 1 through 5
 
 #### Ryume:
 | Address | Modifies | Notes
@@ -80,6 +97,8 @@
 | 058A | Equipped Class  | Equipping any class will adjust stats. Equipping anything else will drop to base value.
 | | |
 | 131A - 1320 | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
+| 1321 - 1325 | Dodonkey Slots 1 through 5
+
 
 #### Onitan:
 | Address | Modifies | Notes
@@ -270,6 +289,8 @@
 - Changing the value at `064E` will change the monster that receives the effects of the attack, despite the monster that your character is in front of.  The battle animation will continue to play out for that monster, too.
 
 - Chaacter "Class" lengths are 1 character shorter than weapon/armor names.
+
+- Side-quest characters (Onitan, Shiro, Feeny) can have dodonkeys hacked into their INV, but the Dodonkeys don't have valid addresses to store items.  Giving to a character with full INV with dodonkey hacked in throws standard "no room left to hold anything" message.
 
 ## Things I'd like to find still:
 
