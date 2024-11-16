@@ -3,6 +3,7 @@
 ## Various:
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
+| 0001 | Menu |
 | 0500 | Main Quest Slot 1 Character Status Pointer | This value seems to point to the spot in memory to get the character attributes + sprite for the STATUS screen
 | 0501 | Main Quest Slot 2 Character Status Pointer | This value seems to point to the spot in memory to get the character attributes + sprite for the STATUS screen
 | 0504 | Side-Quest Slot 1 Character Status Pointer | This value seems to point to the spot in memory to get the character attributes + sprite for the STATUS screen
@@ -15,12 +16,99 @@
 | 0516 | Sidequest Character Menu Slot 3
 | 05FC | Sound/Music Trigger | If a song is playing (ie: 0x90) you can change to a sound (ie: 0x01) and it will play both.
 
+## 0x0001 Menu Values
+
+***Careful!*** Some of these values will scuff your game up pretty bad.  Use  with caution!
+
+***Note: Mostly only tested in main quest world***
+
+| Byte | Notes | | Byte | Notes |
+| ---  |  ---  |-| ---  | ---   |
+| 00 | Forces intro cutscene over whatever screen you're on                                           || 10 | Flips between Main Quest world and Side Quest world
+| 01 | Jubei name registration (will re-trigger start of game after setting and reset your character) || 11 | Helpers submenu
+| 02 | Starting story cutscene                                                                        || 12 | Skills  submenu
+| 03 | Not even sure                                                                                  || 13 | Arts    submenu
+| 04 | Quick black screen then flips back to 05 and screen restores to where you were                 || 14 | Executes "Diary" to save game
+| 05 | Regular gameplay screen (sort of a default value)                                              || 15 | Executes "Look" action
+| 06 | Action menu                                                                                    || 16 | "Call me when you need to walk through the desert again" Executes desert auto-walk procedure
+| 07 | Seems to be used to clear menus, but can't be set on its own                                   || 17 | Sabanosuke (water searching helper) action menu (Talk/Search/Return). Searching replaces your character with helper.  Returning is glitchy, but tries to take you back to where he was last spanwed.
+| 08 | Executes "Talk" action                                                                         || 18 | "Jubei is Dead!"
+| 09 | Fade out/in.  Used to teleport in/out of scenes.  Setting to 09 again takes you back to where you originally flipped to 09 || 19 | Sabanosuke dialogue: "Ugh... I'm so exhausted"
+| 0A | Breaks tiles around character. Not sure where this is used                                     || 1A | Sabanosuke dialogue: "Can't swim any... more..." then triggers procedure that runs when helper gets exhausted.
+| 0B | Triggers enemy encounter                                                                       || 1B | Plays "falling" sound then warps you to another location.  Probably triggered during a specific point in the game.
+| 0C | Screen fade out/in, plays one of the town songs                                                || 1C | Calls "Time Priest" procedure
+| 0D | "Select" screen overlay                                                                        || 1D | Dialogue: "I cannot leave everybody here!" Character then attempts to move 1 coordinate opposite to the direction they're facing
+| 0E | Status submenu                                                                                 || 1E | Character moves several Y co-ordinates.  Sprite changes, dialogue shows "Here we are." Ryumi returned everyone to solid ground.
+| 0F | Items submenu                                                                                  || 1F | Firefighter helper dialogue/action: "A-Ha! Burning wild,eh? I will take care of you! Here we go! Ain't no match for me!" Runs procedure to put out fire
+
+
+| Byte | Notes | | Byte | Notes |
+| ---  |  ---  |-| ---  | ---   |
+| 20 | Firefighter helper dialogue: "Call me when you have more flames to battle!" || 30 | Locks characters, no other effect. Setting 05 fixes |
+| 21 | Crashes game (Invalid OP Code) || 31 | Shows broken "Curse Curse" text on screen |
+| 22 | Breaks graphics. Setting back to 05 fixes it || 32 | Locks characters, no other effect. Setting 05 allows control, but characters go flying, "Jubei is Dead" message shows, then map breaks.  |
+| 23 | Breaks greaphics. Setting to 05 does not fix || 33 | Broken title screen |
+| 24 | Locks characters, no other effect. Setting 05 fixes || 34 | Locks characters, no other effect. Setting 05 fixes  |
+| 25 | Locks characters, no other effect. Setting 05 fixes || 35 | Plays water sound.  Locks characters.  On 05 displays broken actions menu. Action menu remains broken |
+| 26 | Breaks graphics on overworlds (graphics appear fine in towns), locks characters. Setting to 05 unlocks but graphics are still broken || 36 | Like 35, but doesn't display/break the action menu |
+| 27 | Crashes game (Invalid OP Code) || 37 | Locks characters, freezes animation, no other effect. Setting 05 fixes  |
+| 28 | Locks characters, no other effect. Setting 05 fixes || 38 | Locks characters. Setting 05 fixes.  Map somewhat broken on edges after flipping back to 05 |
+| 29 | Crashes game (Invalid OP Code) || 39 | Locks characters, changes Jubei's sprite to 4 circles. Setting 05 unlocks movement, sprite still broken |
+| 2A | Crashes game (Invalid OP Code) || 3A | Crashes game (Invalid OP Code) |
+| 2B | Locks characters, no other effect. Setting 05 fixes || 3B | Moves Ryumi into Jubei, locks movement. Flip back to 05 to unlock, Ryumi will be missing |
+| 2C | Crashes game (Invalid OP Code). Recoverable by setting back to 05 || 3C | Breaks graphics. Flipping to 05 does not fix |
+| 2D | Locks characters, no other effect. Setting 05 fixes || 3D | Breaks graphics. Flipping to 05 does not fix |
+| 2E | Locks characters, no other effect. Setting 05 fixes || 3E | Locks characters, no other effect. Setting 05 fixes |
+| 2F | Splash animation (used by Sabanosuke when diving) || 3F | Crashes game (Invalid OP Code) |
+
+| Byte | Notes | | Byte | Notes |
+| ---  |  ---  |-| ---  | ---   |
+| 40 | Plays tune. Flip back to 05 to fix | | 50 | 
+| 41 | Characters disappear. Flipping 05 restores movement but not sprites | | 51 | 
+| 42 | Crashes game (Invalid OP Code) | | 52 | 
+| 43 | Crashes game | | 53 | 
+| 44 | Causes background tiles Black to flash Magenta | | 54 | 
+| 45 | Plays splashing SFX, then crashes game (Invalid OP Code) | | 55 | 
+| 46 | Crashes game (Invalid OP Code) | | 56 | 
+| 47 | Crashes game (Invalid OP Code) | | 57 | 
+| 48 | Crashes game (Invalid OP Code) | | 58 | 
+| 49 | Displays broken letter entry. Flip back to 05 to fix | | 59 | 
+| 4A | Causes background tiles Black to flash Magenta | | 5A | 
+| 4B | Screen goes black.  Game still responsive.  Set to 4A then 05 to fix | | 5B | 
+| 4C | Ryumei moves into Jubei. Movement locked.  Set to 05 to restore movement, but may be stuck in invisible walls  | | 5C | 
+| 4D | Jubei flickers. Setting to 05 moves Jubei 1 coordinate opposite to the direction he's facing | | 5D | 
+| 4E | Corrupts graphics.  Chracters auto-travel along predetermined route.  Seems to be manipulatable, not sure how it works.  Setting back to 05 does not fix graphics | | 5E | 
+| 4F | Crashes game (Invalid OP Code) Partially recoverable by flipping back to 05 | | 5F | 
+
+
+
+
+| Byte | Notes | | Byte | Notes |
+| ---  |  ---  |-| ---  | ---   |
+| 40 |  | | 50 | 
+| 41 |  | | 51 | 
+| 42 |  | | 52 | 
+| 43 |  | | 53 | 
+| 44 |  | | 54 | 
+| 45 |  | | 55 | 
+| 46 |  | | 56 | 
+| 47 |  | | 57 | 
+| 48 |  | | 58 | 
+| 49 |  | | 59 | 
+| 4A |  | | 5A | 
+| 4B |  | | 5B | 
+| 4C |  | | 5C | 
+| 4D |  | | 5D | 
+| 4E |  | | 5E | 
+| 4F |  | | 5F | 
+
+
 ## 0x0500 - 0x0506 Values (assuming default names)
 | Byte | Value |
 | ---  |  ---  |
 | 00 | Jubei   |
 | 01 | Corrupt Value |
-| 02 | Ryume   |
+| 02 | Ryumi   |
 | 03 | Sabu    |
 | 04 | Onitan  |
 | 05 | Shiro   |
@@ -44,9 +132,9 @@
 ### Money
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
-| 0508 | Gold Amount | Main Quest Currency
-| 0509 | Gold Overflow | Increments 0x01 every time 0x0508 rolls FF
-| 050A | Gold Overflow Overflow | Increments 0x01 every time 0x0508 rolls FF
+| 0508 | Ryo Amount | Main Quest Currency
+| 0509 | Ryo Overflow | Increments 0x01 every time 0x0508 rolls FF
+| 050A | Ryo Overflow Overflow | Increments 0x01 every time 0x0508 rolls FF
 | 050C | Peach Amount | Side Quest Currency
 | 050D | Peach Overflow | Increments 0x01 every time 0x050C rolls FF
 | 050E | Peach Overflow Overflow | Increments 0x01 every time 0x050D rolls FF
@@ -99,7 +187,7 @@
 | 1B00 - 1B06 | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
 | 0B06 - 0B0B | Dodonkey Slots 1 through 5
 
-#### Ryume:
+#### Ryumi:
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
 | 053A | Level | Character level defines attribute values, arts/skills, and EXP cap
@@ -327,6 +415,6 @@
 
 **Individual character EXP**  
 `0x0540` and `0x0541` may be handling Jubei's EXP.  
-`0x953E` and `0x053F` may be handling Ryume's EXP.
+`0x953E` and `0x053F` may be handling Ryumi's EXP.
 
 Both of these values behave kind of strangely.  They definitey do some math off another address.  You can set the value to FF, then defeat a monster and set to FF again and the EXP value will continue to increment (if I recall correctly).  In any case, it's not as straight-forward as just hunting down the exact EXP values to find the addresses.
