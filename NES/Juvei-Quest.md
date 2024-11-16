@@ -88,6 +88,9 @@
 | 05D4 | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05DC | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05E4 | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| | |
+| 0334 - 033A | Inventory Slots 1 through 7 | If invalid/0x00 set on INV slot, all following slots will be blank and unselectable
+
 
 ### Shiro:
 | Address | Modifies | Notes
