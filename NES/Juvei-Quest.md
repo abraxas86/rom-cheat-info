@@ -37,7 +37,8 @@
 | 05A8 | Max HP Overflow | Increments by 0x01 when 0x05A0 is > 0xFF
 | 0570 | Current AP  |
 | 05B0 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Experience      |
+| 0540 | Experience  |
+| 0548 | Experience Overflow | Increments by 0x01 every time 0x0540 > 0xFF
 | 0558 | Condition   |
 | 0598 | Kenpo Dan   | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05B8 | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
@@ -57,7 +58,8 @@
 | 05AA | Max HP Overflow | Increments by 0x01 when 0x05A2 is > 0xFF
 | 0572 | Current AP  |
 | 05B2 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level 
-|  | Experience      | 
+| 0542 | Experience      | 
+| 054A | Experience Overflow | Increments by 0x01 every time 0x0542 > 0x FF
 | 055A | Condition       |
 | 05BA | Attack          | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05C2 | Defense         | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
@@ -145,8 +147,10 @@
 | 0x05 | Seal | |
 | 0x06 | Sick | |
 | 0x07 | Poison | |
+| | | Unlike the other statuses which need the panel to be refreshed to update, setting to 0x08 or 0x09 will immediately display the status icon beside whatever status you currently are |
 | 0x08 | Puts red dude sprite next to status | ![Red dude sprite](images/Juvei-Quest/juvei-condition-0x08.png) |
-| 0x09 | Puts ghost sprite next to status | ![Ghost sprite](images/Juvei-Quest/juvei-condition-0x09.png)
+| 0x09 | Puts ghost sprite next to status | ![Ghost sprite](images/Juvei-Quest/juvei-condition-0x09.png) |
+| | | The rest are invalid status bytes |
 | 0x0A | 0x0A and on appear to all be corrupted statuses | ![Corrupted status](images/Juvei-Quest/juvei-condition-0x0A.png) ![Corrupted status](images/Juvei-Quest/juvei-condition-0x0B.png)
 
 ## Notes:
