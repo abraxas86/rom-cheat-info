@@ -51,6 +51,11 @@
 | 05D0 | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05D8 | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05E0 | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 0578 | Equipped Weapon | Equipping any weapon/armour will adjust ATK. Equipping anything else will drop to base value.
+| 0580 | Equipped Armour | Equipping any weapon/armour will adjust DEF. Equipping anything else will drop to base value.
+| 0588 | Equipped Class  | Equipping any class will adjust stats. Equipping anything else will drop to base value.
+| | |
+| 1B00 - 1B06 | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
 
 #### Ryume:
 | Address | Modifies | Notes
@@ -70,6 +75,11 @@
 | 05CA | Speed           | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05D2 | Luck            | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05DA | Spirit          | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 0569 | Equipped Weapon | Equipping any weapon/armour will adjust ATK. Equipping anything else will drop to base value.
+| 0582 | Equipped Armour | Equipping any weapon/armour will adjust DEF. Equipping anything else will drop to base value.
+| 058A | Equipped Class  | Equipping any class will adjust stats. Equipping anything else will drop to base value.
+| | |
+| 131A - 1320 | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
 
 #### Onitan:
 | Address | Modifies | Notes
@@ -88,8 +98,12 @@
 | 05D4 | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05DC | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05E4 | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 057C | Equipped Weapon | Equipping any weapon/armour will adjust ATK. Equipping anything else will drop to base value.
+| 0584 | Equipped Armour | Equipping any weapon/armour will adjust DEF. Equipping anything else will drop to base value.
+| 058C | Equipped Class  | Equipping any class will adjust stats. Equipping anything else will drop to base value.
 | | |
 | 0334 - 033A | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
+
 
 
 ### Shiro:
@@ -109,9 +123,11 @@
 | 05D5 | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05DD | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05E5 | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 057D | Equipped Weapon | Equipping any weapon/armour will adjust ATK. Equipping anything else will drop to base value.
+| 0585 | Equipped Armour | Equipping any weapon/armour will adjust DEF. Equipping anything else will drop to base value.
+| 058D | Equipped Class  | Equipping any class will adjust stats. Equipping anything else will drop to base value.
 | | |
 | 0341 - 0347 | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
-
 
 ### Feeny:
 | Address | Modifies | Notes
@@ -130,9 +146,11 @@
 | 05D6 | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05DE | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05E6 | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 057E | Equipped Weapon | Equipping any weapon/armour will adjust ATK. Equipping anything else will drop to base value.
+| 0586 | Equipped Armour | Equipping any weapon/armour will adjust DEF. Equipping anything else will drop to base value.
+| 058E | Equipped Class  | Equipping any class will adjust stats. Equipping anything else will drop to base value.
 | | |
 | 034E - 0354 | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
-
 
 
 ## Conditions
@@ -240,8 +258,8 @@
 | 04, 05, 09, 0A | "pb" items  | Corrupt/invalid item of some sort
 | 0C | Undecided 12 | Not sure if this is something the translation team was confused about and just left as-is?  The number seems to correlate to the decimal value of their hex value
 | 2D | Undefined 45 | There are 2 "Undefined" items amidst the Undecided items.  Not sure why.
-| 20 | Atlas | 
-| 21 | Atlas | "This can't be used here" (Onitan)
+| 20 | Atlas | This expands to the individual Atlas pages 
+| 21 | Atlas | This item throws "The atlas can't be used here" in both main-quest and side-quest
 
 ## Notes:
 
@@ -250,6 +268,8 @@
 - If you target a spot where you already killed the enemy (via `0x064E`), it will cause the sprite to appear back on screen.  You can then attack that monster again and kill it, which will add to the counter of defeated monsters.  Thus, you could "respawn" a weak enemy and keep attacking it, which will end the battle as if you killed it and the stronger ones.
 
 - Changing the value at `064E` will change the monster that receives the effects of the attack, despite the monster that your character is in front of.  The battle animation will continue to play out for that monster, too.
+
+- Chaacter "Class" lengths are 1 character shorter than weapon/armor names.
 
 ## Things I'd like to find still:
 
