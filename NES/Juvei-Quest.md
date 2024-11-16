@@ -89,7 +89,7 @@
 | 05DC | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05E4 | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | | |
-| 0334 - 033A | Inventory Slots 1 through 7 | If invalid/0x00 set on INV slot, all following slots will be blank and unselectable
+| 0334 - 033A | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
 
 
 ### Shiro:
@@ -109,6 +109,9 @@
 | 05D5 | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05DD | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05E5 | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| | |
+| 0341 - 0347 | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
+
 
 ### Feeny:
 | Address | Modifies | Notes
@@ -127,24 +130,10 @@
 | 05D6 | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05DE | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05E6 | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| | |
+| 034E - 0354 | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
 
 
-
-| Address | Modifies | Notes
-|   ---   |    ---   |   ---  |
-|  | Level       |
-|  | Current HP  |
-|  | Max HP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Current AP  |
-|  | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Experience  |
-|  | Condition   |
-|  | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Defense     | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Speed       | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 
 ## Conditions
 | Value   | Status Condition | Notes |
