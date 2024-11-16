@@ -1,13 +1,18 @@
 # Juvei (Jubei) Quest
 
 ## Various:
+| Address | Modifies | Notes
+|   ---   |    ---   |   ---  |
+| 05FC | Sound/Music Trigger | If a song is playing (ie: 0x90) you can change to a sound (ie: 0x01) and it will play both.
 
+
+### Money
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
 | 0503 | Gold Amount | Main Quest Currency
 | 050C | Peach Amount | Side Quest Currency
 
-## Map Party Location info
+### Map Party Location info
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
 | 05E8 - 05EA | This has something to do with the formation of your party. | `0x6C` `0x6C` `0x6C` when party is 3x horizontal
@@ -15,7 +20,7 @@
 | 05F8 | Used when `FLIRT`ing and `SCOUT`ing.  Tracks Y-distance from main hero.  If you freeze this value, the main hero moves vertically instead of being locked into place.  You can still `TALK` to the empty spot where the hero should be to return to normal. | Will self-correct as soon as you un-freeze the value and move your character up/down 1 unit.
 | 05FA | Same as 05F8, but for the other non-controlled character during that should be locked into place.
 
-## Battle Stuff:
+### Battle Stuff:
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
 | 064C | Something with battle attack animation/timing  | Might be a boolean indicator that a player character is actively attacking an enemy?  Flips to 01 when ATK ART used against enemy. Flips to 01 when DEBUFF ART used against enemy. Stays 00 when BUFF ART used on own team 
@@ -24,10 +29,9 @@
 | 064F | Something with battle attack animation/timing  | Flips 00/01 several times per attack phase.
 | 065C | Something with enemy sprite animations during battle | Flips between 00 and 02, looks like it may have something to do with ending turn cycles?
 
+### Character Attributes:
 
-## Character Attributes:
-
-### Jubei:
+#### Jubei:
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
 | 0538 | Level       | Character level defines attribute values, arts/skills, and EXP cap
@@ -48,7 +52,7 @@
 | 05D8 | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05E0 | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 
-### Ryume:
+#### Ryume:
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
 | 053A | Level | Character level defines attribute values, arts/skills, and EXP cap
@@ -67,7 +71,7 @@
 | 05D2 | Luck            | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05DA | Spirit          | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 
-### Onitan:
+#### Onitan:
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
 | 053C | Level       |
@@ -75,8 +79,9 @@
 | 05A4 | Max HP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 0574 | Current AP  |
 | 05B4 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Experience  |
-|  | Condition   |
+| 0544 | Experience  |
+| 054C | Experience Overflow | Increments by 0x01 when 0x0544 > 255
+| 055C | Condition   |
 | 05BC | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05C4 | Defense     | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05CC | Speed       | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
@@ -92,8 +97,9 @@
 | 05A5 | Max HP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 0575 | Current AP  |
 | 05B5 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Experience  |
-|  | Condition   |
+| 0545 | Experience  |
+| 054D | Experience Overflow | Increments by 0x01 when 0x0545 > 255
+| 055D | Condition   |
 | 05BD | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05C5 | Defense     | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05CD | Speed       | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
@@ -109,8 +115,9 @@
 | 05A6 | Max HP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 0576 | Current AP  |
 | 05B6 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
-|  | Experience  |
-|  | Condition   |
+| 0546 | Experience  |
+| 054E | Experience Overflow | Increments by 0x01 when 0x0546 > 255
+| 055E | Condition   |
 | 05BE | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05C6 | Defense     | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05CE | Speed       | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
