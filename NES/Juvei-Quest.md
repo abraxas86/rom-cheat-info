@@ -146,7 +146,7 @@
 |  | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 |  | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 
-### Conditions
+## Conditions
 | Value   | Status Condition | Notes |
 |   ---   |  --------------  |  ---  |
 | 0x00 | Normal | |
@@ -162,6 +162,37 @@
 | 0x09 | Puts ghost sprite next to status | ![Ghost sprite](images/Juvei-Quest/juvei-condition-0x09.png) |
 | | | The rest are invalid status bytes |
 | 0x0A | 0x0A and on appear to all be corrupted statuses | ![Corrupted status](images/Juvei-Quest/juvei-condition-0x0A.png) ![Corrupted status](images/Juvei-Quest/juvei-condition-0x0B.png)
+
+## Inventory Items
+|  Value  |    Item    | |  Value  |    Item    | |  Value  |    Item    | |  Value  |    Item    | |  Value  |    Item    |
+|   ---   |  --------  |-|   ---   |  --------  |-|   ---   |  --------  |-|   ---   |  --------  |-|   ---   |  --------  |
+| 00 | Empty Slot      | | 10 | Cosmotron       | | 20 | Atlas           | | 30 | Old  Fang 3     | | 40 |
+| 01 | Scroll Box      | | 11 | Viper Orb       | | 21 | Atlas           | | 31 | Old Armor 2     | | 41 |
+| 02 | 10              | | 12 | Fire Feather    | | 22 | Undecided 34    | | 32 | Old Armor 3     | | 42 |
+| 03 | Daifuku         | | 13 | Dodonkey        | | 23 | Norn's Tear     | | 33 | Adult Magazine  | | 43 |
+| 04 | 50 pb           | | 14 | Fried Tofu      | | 24 | Fire Sake       | | 34 | Blue Book       | | 44 |
+| 05 | 100 pb          | | 15 | "Zippo" Oil     | | 25 | Baldonite       | | 35 | Crystal Ball    | | 45 |
+| 06 | Old Fang 2      | | 16 | Burnt Grass     | | 26 | Yawny Mukkuri   | | 36 | Teardrop        | | 46 |
+| 07 | Old Armor 1     | | 17 | Undecided 23    | | 27 | Baldon Burst    | | 37 | Undecided 55    | | 47 |
+| 08 | Snow Gun        | | 18 | E-Interpreter   | | 28 | Ancient Flame   | | 38 | Golden Shell    | | 48 |
+| 09 | 500 pb          | | 19 | Dark Hammer     | | 29 | Iron Pipe       | | 39 | Teleport Stone  | | 49 |
+| 0A | 1000 pb         | | 1A | Trampoline      | | 2A | Occulton        | | 3A | Missile Pod     | | 4A |
+| 0B | Gold Coin       | | 1B | Bean Sprout     | | 2B | Ancient Gun     | | 3B | Palm Rocket     | | 4B |
+| 0C | Undecided 12    | | 1C | Bingbing        | | 2C | Ancient ?       | | 3C | Old Fang 1      | | 4C |
+| 0D | Bagra Seed      | | 1D | Sandblalst Lamp | | 2D | Undefined 45    | | 3D | Old Collar      | | 4D |
+| 0E | Ath Staff       | | 1E | Foliage Set     | | 2E | Doll Key        | | 3E | Old Fang 4      | | 4E |
+| 0F | Gain Burst      | | 1F | Megaton Coin    | | 2F | Sealing Sphere  | | 3F | Dragon Orb      | | 4F |
+
+
+## Inventory Notes
+
+| Value   | Item | Notes |
+|   ---   |  --------------  |  ---  |
+| 02 | 10 | Not really sure what this item is about
+| 04, 05, 09, 0A | "pb" items  | Corrupt/invalid item of some sort
+| 0C | Undecided 12 | Not sure if this is something the translation team was confused about and just left as-is?
+| 20 | Atlas | 
+| 21 | Atlas | "This can't be used here" (Onitan)
 
 ## Notes:
 
