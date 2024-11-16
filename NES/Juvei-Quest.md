@@ -44,8 +44,12 @@
 ### Money
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
-| 0503 | Gold Amount | Main Quest Currency
+| 0508 | Gold Amount | Main Quest Currency
+| 0509 | Gold Overflow | Increments 0x01 every time 0x0508 rolls FF
+| 050A | Gold Overflow Overflow | Increments 0x01 every time 0x0508 rolls FF
 | 050C | Peach Amount | Side Quest Currency
+| 050D | Peach Overflow | Increments 0x01 every time 0x050C rolls FF
+| 050E | Peach Overflow Overflow | Increments 0x01 every time 0x050D rolls FF
 
 ### Map Party Location info
 | Address | Modifies | Notes
