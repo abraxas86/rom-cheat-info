@@ -173,7 +173,7 @@ ie: Up-Left = 08 + 02 = 0A
 ### Map Party Location info
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
-| 05E8 - 05EA | This has something to do with the formation of your party. | `0x6C` `0x6C` `0x6C` when party is 3x horizontal
+| 05E8 - 05EB | This has something to do with the formation of your party. | `0x6C` `0x6C` `0x6C` when party is 3x horizontal
 | 05EC - 05EF    | Something to do with Y-coordinate distance between party and NPCs
 | 05F8 | Used when `FLIRT`ing and `SCOUT`ing.  Tracks Y-distance from main hero.  If you freeze this value, the main hero moves vertically instead of being locked into place.  You can still `TALK` to the empty spot where the hero should be to return to normal. | Will self-correct as soon as you un-freeze the value and move your character up/down 1 unit.
 | 05FA | Same as 05F8, but for the other non-controlled character during that should be locked into place.
@@ -181,6 +181,7 @@ ie: Up-Left = 08 + 02 = 0A
 ### Battle Stuff:
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
+| 00EB | Damage (given and received)
 | 064C | Something with battle attack animation/timing  | Might be a boolean indicator that a player character is actively attacking an enemy?  Flips to 01 when ATK ART used against enemy. Flips to 01 when DEBUFF ART used against enemy. Stays 00 when BUFF ART used on own team 
 | 064E | Enemy number being attacked (00 = first enemy) | Confirmed not used for the player character being attacked by enemy
 | 064D | Enemy visibility? | Seems to stick to 0x80 and self-correct to that value if changed.  If frozen to another value, enemy sprite will disappear when hit.
@@ -255,7 +256,8 @@ ie: Up-Left = 08 + 02 = 0A
 | 0574 | Current AP  |
 | 05B4 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 0544 | Experience  |
-| 054C | Experience Overflow | Increments by 0x01 when 0x0544 > 255
+| 054C | Experience Overflow | Increments by 0x01 when 0x0544 > FF
+| 0554 | Experience Overflow Overflow | Increments by 0x01 when 0x054C > FF
 | 055C | Condition   |
 | 05BC | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05C4 | Defense     | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
@@ -278,7 +280,8 @@ ie: Up-Left = 08 + 02 = 0A
 | 0575 | Current AP  |
 | 05B5 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 0545 | Experience  |
-| 054D | Experience Overflow | Increments by 0x01 when 0x0545 > 255
+| 054D | Experience Overflow | Increments by 0x01 when 0x0545 > FF
+| 0555 | Experience Overflow Overflow | Increments by 0x01 when 0x54D > FF
 | 055D | Condition   |
 | 05BD | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05C5 | Defense     | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
@@ -301,7 +304,8 @@ ie: Up-Left = 08 + 02 = 0A
 | 0576 | Current AP  |
 | 05B6 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 0546 | Experience  |
-| 054E | Experience Overflow | Increments by 0x01 when 0x0546 > 255
+| 054E | Experience Overflow | Increments by 0x01 when 0x0546 > FF
+| 0556 | Experience Overflow Overflow | Increments by 0x01 when 0x054E > FF
 | 055E | Condition   |
 | 05BE | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
 | 05C6 | Defense     | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
@@ -314,6 +318,30 @@ ie: Up-Left = 08 + 02 = 0A
 | 058E | Equipped Class  | Equipping any class will adjust stats. Equipping anything else will drop to base value.
 | | |
 | 034E - 0354 | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
+
+### Saru:
+| Address | Modifies | Notes
+| --- | --- | --- |
+| 053F | Level       |
+| 0567 | Current HP  |
+| 05A7 | Max HP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 0577 | Current AP  |
+| 05B7 | Max AP      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 0547 | Experience  |
+| 054F | Experience Overflow | Increments by 0x01 when 0x0547 > FF
+| 0557 | Experience Overflow Overflow | Increments by 0x01 when 0x054F > FF
+| 055F | Condition   |
+| 05BF | Attack      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05C7 | Defense     | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05CF | Speed       | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05D7 | Luck        | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05DF | Spirit      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 05E7 | Wisdom      | Resets on its own often (ie: opening Status menu). Likely hard-coded to current level
+| 057F | Equipped Weapon | Equipping any weapon/armour will adjust ATK. Equipping anything else will drop to base value.
+| 0587 | Equipped Armour | Equipping any weapon/armour will adjust DEF. Equipping anything else will drop to base value.
+| 058F | Equipped Class  | Equipping any class will adjust stats. Equipping anything else will drop to base value.
+| | |
+| 035B - 0361 | Inventory Slots 1 through 7 | If set to 0x00 or 0xFF, all following slots will be blank and unselectable
 
 ## Character Races
 | Value   | Race | Notes |
