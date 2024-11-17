@@ -35,7 +35,7 @@
 | 08 | Executes "Talk" action                                                                         || 18 | "Jubei is Dead!"
 | 09 | Fade out/in.  Used to teleport in/out of scenes.  Setting to 09 again takes you back to where you originally flipped to 09 || 19 | Sabanosuke dialogue: "Ugh... I'm so exhausted"
 | 0A | Breaks tiles around character. Not sure where this is used                                     || 1A | Sabanosuke dialogue: "Can't swim any... more..." then triggers procedure that runs when helper gets exhausted.
-| 0B | Triggers enemy encounter                                                                       || 1B | Plays "falling" sound then warps you to another location.  Probably triggered during a specific point in the game.
+| 0B | Triggers enemy encounter                                                                       || 1B | Plays "falling" sound then warps you to another location.  This only works "properly" in the side-quest.  Will take you to scuffed area in main quest.
 | 0C | Screen fade out/in, plays one of the town songs                                                || 1C | Calls "Time Priest" procedure
 | 0D | "Select" screen overlay                                                                        || 1D | Dialogue: "I cannot leave everybody here!" Character then attempts to move 1 coordinate opposite to the direction they're facing
 | 0E | Status submenu                                                                                 || 1E | Character moves several Y co-ordinates.  Sprite changes, dialogue shows "Here we are." Ryumi returned everyone to solid ground.
@@ -44,63 +44,104 @@
 
 | Byte | Notes | | Byte | Notes |
 | ---  |  ---  |-| ---  | ---   |
-| 20 | Firefighter helper dialogue: "Call me when you have more flames to battle!" || 30 | Locks characters, no other effect. Setting 05 fixes |
-| 21 | Crashes game (Invalid OP Code) || 31 | Shows broken "Curse Curse" text on screen |
-| 22 | Breaks graphics. Setting back to 05 fixes it || 32 | Locks characters, no other effect. Setting 05 allows control, but characters go flying, "Jubei is Dead" message shows, then map breaks.  |
-| 23 | Breaks greaphics. Setting to 05 does not fix || 33 | Broken title screen |
-| 24 | Locks characters, no other effect. Setting 05 fixes || 34 | Locks characters, no other effect. Setting 05 fixes  |
-| 25 | Locks characters, no other effect. Setting 05 fixes || 35 | Plays water sound.  Locks characters.  On 05 displays broken actions menu. Action menu remains broken |
+| 20 | Firefighter helper dialogue: "Call me when you have more flames to battle!"                    || 30 | Locks characters, no other effect. Setting 05 fixes |
+| 21 | Crashes game (Invalid OP Code) 	                                                              || 31 | Shows broken "Curse Curse" text on screen |
+| 22 | Breaks graphics. Setting back to 05 fixes it                                                   || 32 | Locks characters, no other effect. Setting 05 allows control, but characters go flying, "Jubei is Dead" message shows, then map breaks.  |
+| 23 | Breaks greaphics. Setting to 05 does not fix                                                   || 33 | Broken title screen |
+| 24 | Locks characters, no other effect. Setting 05 fixes                                            || 34 | Locks characters, no other effect. Setting 05 fixes  |
+| 25 | Locks characters, no other effect. Setting 05 fixes                                            || 35 | Plays water sound.  Locks characters.  On 05 displays broken actions menu. Action menu remains broken |
 | 26 | Breaks graphics on overworlds (graphics appear fine in towns), locks characters. Setting to 05 unlocks but graphics are still broken || 36 | Like 35, but doesn't display/break the action menu |
-| 27 | Crashes game (Invalid OP Code) || 37 | Locks characters, freezes animation, no other effect. Setting 05 fixes  |
-| 28 | Locks characters, no other effect. Setting 05 fixes || 38 | Locks characters. Setting 05 fixes.  Map somewhat broken on edges after flipping back to 05 |
-| 29 | Crashes game (Invalid OP Code) || 39 | Locks characters, changes Jubei's sprite to 4 circles. Setting 05 unlocks movement, sprite still broken |
-| 2A | Crashes game (Invalid OP Code) || 3A | Crashes game (Invalid OP Code) |
-| 2B | Locks characters, no other effect. Setting 05 fixes || 3B | Moves Ryumi into Jubei, locks movement. Flip back to 05 to unlock, Ryumi will be missing |
-| 2C | Crashes game (Invalid OP Code). Recoverable by setting back to 05 || 3C | Breaks graphics. Flipping to 05 does not fix |
-| 2D | Locks characters, no other effect. Setting 05 fixes || 3D | Breaks graphics. Flipping to 05 does not fix |
-| 2E | Locks characters, no other effect. Setting 05 fixes || 3E | Locks characters, no other effect. Setting 05 fixes |
-| 2F | Splash animation (used by Sabanosuke when diving) || 3F | Crashes game (Invalid OP Code) |
+| 27 | Crashes game (Invalid OP Code)                                                                 || 37 | Locks characters, freezes animation, no other effect. Setting 05 fixes  |
+| 28 | Locks characters, no other effect. Setting 05 fixes                                            || 38 | Locks characters. Setting 05 fixes.  Map somewhat broken on edges after flipping back to 05 |
+| 29 | Crashes game (Invalid OP Code)                                                                 || 39 | Locks characters, changes Jubei's sprite to 4 circles. Setting 05 unlocks movement, sprite still broken |
+| 2A | Crashes game (Invalid OP Code)                                                                 || 3A | Crashes game (Invalid OP Code) |
+| 2B | Locks characters, no other effect. Setting 05 fixes                                            || 3B | Moves Ryumi into Jubei, locks movement. Flip back to 05 to unlock, Ryumi will be missing |
+| 2C | Crashes game (Invalid OP Code). Recoverable by setting back to 05                              || 3C | Breaks graphics. Flipping to 05 does not fix |
+| 2D | Locks characters, no other effect. Setting 05 fixes                                            || 3D | Breaks graphics. Flipping to 05 does not fix |
+| 2E | Locks characters, no other effect. Setting 05 fixes                                            || 3E | Locks characters, no other effect. Setting 05 fixes |
+| 2F | Splash animation (used by Sabanosuke when diving)                                              || 3F | Crashes game (Invalid OP Code) |
 
 | Byte | Notes | | Byte | Notes |
 | ---  |  ---  |-| ---  | ---   |
-| 40 | Plays tune. Flip back to 05 to fix | | 50 | 
-| 41 | Characters disappear. Flipping 05 restores movement but not sprites | | 51 | 
-| 42 | Crashes game (Invalid OP Code) | | 52 | 
-| 43 | Crashes game | | 53 | 
-| 44 | Causes background tiles Black to flash Magenta | | 54 | 
-| 45 | Plays splashing SFX, then crashes game (Invalid OP Code) | | 55 | 
-| 46 | Crashes game (Invalid OP Code) | | 56 | 
-| 47 | Crashes game (Invalid OP Code) | | 57 | 
-| 48 | Crashes game (Invalid OP Code) | | 58 | 
-| 49 | Displays broken letter entry. Flip back to 05 to fix | | 59 | 
-| 4A | Causes background tiles Black to flash Magenta | | 5A | 
-| 4B | Screen goes black.  Game still responsive.  Set to 4A then 05 to fix | | 5B | 
-| 4C | Ryumei moves into Jubei. Movement locked.  Set to 05 to restore movement, but may be stuck in invisible walls  | | 5C | 
-| 4D | Jubei flickers. Setting to 05 moves Jubei 1 coordinate opposite to the direction he's facing | | 5D | 
-| 4E | Corrupts graphics.  Chracters auto-travel along predetermined route.  Seems to be manipulatable, not sure how it works.  Setting back to 05 does not fix graphics | | 5E | 
-| 4F | Crashes game (Invalid OP Code) Partially recoverable by flipping back to 05 | | 5F | 
+| 40 | Plays tune. Flip back to 05 to fix                                                             || 50 | Characters disappear. Flipping 05 restores movement but not sprites
+| 41 | Characters disappear. Flipping 05 restores movement but not sprites                            || 51 |  Crashes game (Invalid OP Code)
+| 42 | Crashes game (Invalid OP Code)                                                                 || 52 |  Crashes game (Invalid OP Code)
+| 43 | Crashes game                                                                                   || 53 | Glitches character sprites, doesn't seem to affect gameplay
+| 44 | Causes background tiles Black to flash Magenta                                                 || 54 | Locks characters, no other effect. Setting 05 fixes
+| 45 | Plays splashing SFX, then crashes game (Invalid OP Code)                                       || 55 | Locks characters, no other effect. Setting 05 fixes
+| 46 | Crashes game (Invalid OP Code)                                                                 || 56 | Crashes game (Invalid OP Code) 
+| 47 | Crashes game (Invalid OP Code)                                                                 || 57 | Crashes game (Invalid OP Code) 
+| 48 | Crashes game (Invalid OP Code)                                                                 || 58 | Crashes game (Invalid OP Code). Flip back to 05 to restore
+| 49 | Displays broken letter entry. Flip back to 05 to fix                                           || 59 | Crashes game (Invalid OP Code) 
+| 4A | Causes background tiles Black to flash Magenta                                                 || 5A | Locks characters, Jubei disappears. Flip to 05 to restore movement. Ryume disappeared after entering town.
+| 4B | Screen goes black.  Game still responsive.  Set to 4A then 05 to fix                           || 5B | Locks movement, places black square behind Jubei.  Causes Jubei to twirl. Movement restored with 05, some graphics broken.
+| 4C | Ryumi moves into Jubei. Movement locked.  Set to 05 to restore movement, but may be stuck in invisible walls  || 5C | Locks characterrs, Screen flashes black. Restores with 05, graphics still broken. Can repair by entering/leaving town
+| 4D | Jubei flickers. Setting to 05 moves Jubei 1 coordinate opposite to the direction he's facing   || 5D | Locks charcters. No further effects.  Set back to 05 to restore
+| 4E | Corrupts graphics.  Chracters auto-travel along predetermined route.  Seems to be manipulatable, not sure how it works.  Setting back to 05 does not fix graphics || 5E | Characters locked, explosion SFX and screen shake. Set to 05 to end SFX and shake and restore movement.
+| 4F | Crashes game (Invalid OP Code) Partially recoverable by flipping back to 05                    || 5F | Breaks graphics, throws Invalid OP Code.  Recoverable by setting to 05 and entering/leaving town.
+
+| Byte | Notes | | Byte | Notes |
+| ---  |  ---  |-| ---  | ---   |
+| 60 | Locks characters, triggers explosion SFX. Throws invalid OP cde. Set to 05 to recover          || 70 | Crashes game (Invalid OP Code). Unrecoverable 
+| 61 | Same as 60 without the Invalid OP Code                                                         || 71 | Locks characters, breaks some sprites. Set to 05 to restore
+| 62 | Same as 61                                                                                     || 72 | Crashes game (Invalid OP Code). Unrecoverable
+| 63 | Crashes game, Invalid OP code.  Unrecoverable                                                  || 73 | Locks characters, breaks character sprites. Set to 05 to unlock. Enter/exit town to reset sprites
+| 64 | Locks characters, throws invalid OP Code.  Set back to 05 to recover                           || 74 | Crashes game (Invalid OP Code). Unrecoverable 
+| 65 | Locks characters. No other effect. Set back to 05 to recover                                   || 75 | Locks characters. No other effect. Set back to 05 to recover
+| 66 | Locks characters, throws invalid OP Code.  Set back to 05 to recover                           || 76 | Crashes game (Invalid OP Code). Unrecoverable 
+| 67 | Locks characters, throws invalid OP Code.  Set back to 05 to recover                           || 77 | Like 1B but with a fade out/in instead of the falling SFX 
+| 68 | Locks characters, throws invalid OP Code.  Set back to 05 to recover                           || 78 | Crashes game. No error. Unrecoverable
+| 69 | Crashes game (Invalid OP Code). Unrecoverable                                                  || 79 | Locks characters, throws invalid OP Code.  Set back to 05 to recover    
+| 6A | Crashes game (Invalid OP Code). Unrecoverable                                                  || 7A | Locks characters. No other effect. Set back to 05 to recover
+| 6B | Locks characters. No other effect. Set back to 05 to recover                                   || 7B | Crashes game. No error. Unrecoverable
+| 6C | Crashes game (Invalid OP Code). Unrecoverable                                                  || 7C | Crashes game (Invalid OP Code). Unrecoverable  
+| 6D | Locks characters. No other effect. Set back to 05 to recover                                   || 7D | Locks characters, breaks sprites, throws Invalid OP Code. Flip back to 05 to fix.  Enter/exit town to correct sprites
+| 6E | Locks characters, breaks some sprites. Set to 05 to restore, enter/exit town to fix broken sprites || 7E | Crashes game. No error. Unrecoverable
+| 6F | Crashes game (Invalid OP Code). Unrecoverable                                                  || 7F | Crashes game (Invalid OP Code). Unrecoverable    
+
+0x80 overflows loops back to 0x00 effect and so on
+
+
+| Byte | Notes | | Byte | Notes |
+| ---  |  ---  |-| ---  | ---   |
+| 80 |  || 90 | 
+| 81 |  || 91 | 
+| 82 |  || 92 | 
+| 83 |  || 93 | 
+| 84 |  || 94 | 
+| 85 |  || 95 | 
+| 86 |  || 96 | 
+| 87 |  || 97 | 
+| 88 |  || 98 | 
+| 89 |  || 99 | 
+| 8A |  || 9A | 
+| 8B |  || 9B | 
+| 8C |  || 9C | 
+| 8D |  || 9D | 
+| 8E |  || 9E | 
+| 8F |  || 9F | 
 
 
 
 
 | Byte | Notes | | Byte | Notes |
 | ---  |  ---  |-| ---  | ---   |
-| 40 |  | | 50 | 
-| 41 |  | | 51 | 
-| 42 |  | | 52 | 
-| 43 |  | | 53 | 
-| 44 |  | | 54 | 
-| 45 |  | | 55 | 
-| 46 |  | | 56 | 
-| 47 |  | | 57 | 
-| 48 |  | | 58 | 
-| 49 |  | | 59 | 
-| 4A |  | | 5A | 
-| 4B |  | | 5B | 
-| 4C |  | | 5C | 
-| 4D |  | | 5D | 
-| 4E |  | | 5E | 
-| 4F |  | | 5F | 
+| 40 |  || 50 | 
+| 41 |  || 51 | 
+| 42 |  || 52 | 
+| 43 |  || 53 | 
+| 44 |  || 54 | 
+| 45 |  || 55 | 
+| 46 |  || 56 | 
+| 47 |  || 57 | 
+| 48 |  || 58 | 
+| 49 |  || 59 | 
+| 4A |  || 5A | 
+| 4B |  || 5B | 
+| 4C |  || 5C | 
+| 4D |  || 5D | 
+| 4E |  || 5E | 
+| 4F |  || 5F | 
 
 
 ## 0x0500 - 0x0506 Values (assuming default names)
