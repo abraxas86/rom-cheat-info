@@ -90,7 +90,7 @@
 | 4B | Screen goes black.  Game still responsive.  Set to 4A then 05 to fix                           || 5B | Locks movement, places black square behind Jubei.  Causes Jubei to twirl. Movement restored with 05, some graphics broken.
 | 4C | Ryumi moves into Jubei. Movement locked.  Set to 05 to restore movement, but may be stuck in invisible walls  || 5C | Locks characterrs, Screen flashes black. Restores with 05, graphics still broken. Can repair by entering/leaving town
 | 4D | Jubei flickers. Setting to 05 moves Jubei 1 coordinate opposite to the direction he's facing   || 5D | Locks charcters. No further effects.  Set back to 05 to restore
-| 4E | Corrupts graphics.  Chracters auto-travel along predetermined route.  Seems to be manipulatable, not sure how it works.  Setting back to 05 does not fix graphics || 5E | Characters locked, explosion SFX and screen shake. Set to 05 to end SFX and shake and restore movement.
+| 4E | Corrupts graphics.  Chracters auto-travel along predetermined route.  Seems to be manipulatable, not sure how it works.  Setting back to 05 does not fix graphics || 5E | Characters locked, explosion SFX and screen shake. Set to 05 to end SFX and shake and restore movement. This is similar to the effect you get when offering the Oni Tears to the altar.
 | 4F | Crashes game (Invalid OP Code) Partially recoverable by flipping back to 05                    || 5F | Breaks graphics, throws Invalid OP Code.  Recoverable by setting to 05 and entering/leaving town.
 
 | Byte | Notes | | Byte | Notes |
