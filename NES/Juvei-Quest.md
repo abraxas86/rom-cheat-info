@@ -473,4 +473,7 @@ ie: Up-Left = 08 + 02 = 0A
 ## Things I'd like to find still:
 
 - Location bytes for quick-warp
+
 - How to manipulate encounters
+
+- Forgot to look out the Depository addresses
