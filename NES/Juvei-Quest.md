@@ -48,7 +48,7 @@
 | 08 | Executes "Talk" action                                                                         || 18 | "Jubei is Dead!"
 | 09 | Fade out/in.  Used to teleport in/out of scenes.  Setting to 09 again takes you back to where you originally flipped to 09 || 19 | Sabanosuke dialogue: "Ugh... I'm so exhausted"
 | 0A | Breaks tiles around character. Not sure where this is used                                     || 1A | Sabanosuke dialogue: "Can't swim any... more..." then triggers procedure that runs when helper gets exhausted.
-| 0B | Triggers enemy encounter                                                                       || 1B | Plays "falling" sound then warps you to another location.  This only works "properly" in the side-quest.  Will take you to scuffed area in main quest.
+| 0B | Triggers enemy encounter                                                                       || 1B | Plays "falling" sound then warps you the cave at Miminari Island.  This only works "properly" in the side-quest.  Will take you to scuffed area in main quest.
 | 0C | Screen fade out/in, plays one of the town songs                                                || 1C | Calls "Time Priest" procedure
 | 0D | "Select" screen overlay                                                                        || 1D | Dialogue: "I cannot leave everybody here!" Character then attempts to move 1 coordinate opposite to the direction they're facing
 | 0E | Status submenu                                                                                 || 1E | Character moves several Y co-ordinates.  Sprite changes, dialogue shows "Here we are." Ryumi returned everyone to solid ground.
