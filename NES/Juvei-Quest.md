@@ -3,8 +3,20 @@
 ## Various:
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
-| 0001 | Menu |
-| 0011 | Input Value | 
+| 0001 | Menu         |
+| 0006 | Front character sprite x-coord
+| 0007 | Front character sprite x-coord rollover | Increments/decrements when 0x0006 rolls 0xFF/0x00
+| 0008 | Front character collision detection y-coord | Not sure why there isn't one for x-coord...  I may be wrong on what this is doing?
+| 000A | Front character Sprite y-coord
+| 0011 | Input Value  |
+| 0013 | Input Check? | Briefly flashes to the same value as 0011 on input press, then flips back to 0x00
+| 0018 | Movement indicator | Sets to 01 when character is moving.  Flips back to 00 when movement cycle completed
+| 0020 | Timer for screen transition cycles (enter/exit towns and battles, etc) | If value frozen, screen will fade to black and stay there until value unfrozen
+| 0092 | Something to do with exit locations and endpoints | Changing this may remove exits to/from towns and buildings. It may also change where they take you to.
+| 00C5 | Something to do with enemy encounters | If value frozen, encounter is triggered
+| 00D4 | Stops music. Not sure if drum channel still playing?
+| 00D7 | Music channel/pattern
+| 00F0 | Sprite animation | Freezing will lock your character in place, but NPCs will continue to slide around
 | 0500 | Main Quest Slot 1 Character Status Pointer | This value seems to point to the spot in memory to get the character attributes + sprite for the STATUS screen
 | 0501 | Main Quest Slot 2 Character Status Pointer | This value seems to point to the spot in memory to get the character attributes + sprite for the STATUS screen
 | 0504 | Side-Quest Slot 1 Character Status Pointer | This value seems to point to the spot in memory to get the character attributes + sprite for the STATUS screen
@@ -432,8 +444,5 @@ ie: Up-Left = 08 + 02 = 0A
 
 ## Things I'd like to find still:
 
-**Individual character EXP**  
-`0x0540` and `0x0541` may be handling Jubei's EXP.  
-`0x953E` and `0x053F` may be handling Ryumi's EXP.
-
-Both of these values behave kind of strangely.  They definitey do some math off another address.  You can set the value to FF, then defeat a monster and set to FF again and the EXP value will continue to increment (if I recall correctly).  In any case, it's not as straight-forward as just hunting down the exact EXP values to find the addresses.
+- Location bytes for quick-warp
+- How to manipulate encounters
