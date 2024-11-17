@@ -4,6 +4,7 @@
 | Address | Modifies | Notes
 |   ---   |    ---   |   ---  |
 | 0001 | Menu |
+| 0011 | Input Value | 
 | 0500 | Main Quest Slot 1 Character Status Pointer | This value seems to point to the spot in memory to get the character attributes + sprite for the STATUS screen
 | 0501 | Main Quest Slot 2 Character Status Pointer | This value seems to point to the spot in memory to get the character attributes + sprite for the STATUS screen
 | 0504 | Side-Quest Slot 1 Character Status Pointer | This value seems to point to the spot in memory to get the character attributes + sprite for the STATUS screen
@@ -102,46 +103,23 @@
 0x80 overflows loops back to 0x00 effect and so on
 
 
-| Byte | Notes | | Byte | Notes |
-| ---  |  ---  |-| ---  | ---   |
-| 80 |  || 90 | 
-| 81 |  || 91 | 
-| 82 |  || 92 | 
-| 83 |  || 93 | 
-| 84 |  || 94 | 
-| 85 |  || 95 | 
-| 86 |  || 96 | 
-| 87 |  || 97 | 
-| 88 |  || 98 | 
-| 89 |  || 99 | 
-| 8A |  || 9A | 
-| 8B |  || 9B | 
-| 8C |  || 9C | 
-| 8D |  || 9D | 
-| 8E |  || 9E | 
-| 8F |  || 9F | 
+## 0x0011 Input Values:
+
+*Note pressing multiple inputs adds the byte values together.
+ie: Up-Left = 08 + 02 = 0A
+
+| Byte | Input  |
+| ---  |  ----  |
+|  01  | Right  |
+|  02  | Left   |
+|  04  | Down   |
+|  08  | Up	    |
+|  10  | Start  |
+|  20  | Select |
+|  40  | B      |
+|  80  | A      |
 
 
-
-
-| Byte | Notes | | Byte | Notes |
-| ---  |  ---  |-| ---  | ---   |
-| 40 |  || 50 | 
-| 41 |  || 51 | 
-| 42 |  || 52 | 
-| 43 |  || 53 | 
-| 44 |  || 54 | 
-| 45 |  || 55 | 
-| 46 |  || 56 | 
-| 47 |  || 57 | 
-| 48 |  || 58 | 
-| 49 |  || 59 | 
-| 4A |  || 5A | 
-| 4B |  || 5B | 
-| 4C |  || 5C | 
-| 4D |  || 5D | 
-| 4E |  || 5E | 
-| 4F |  || 5F | 
 
 
 ## 0x0500 - 0x0506 Values (assuming default names)
