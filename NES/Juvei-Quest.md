@@ -362,7 +362,7 @@ ie: Up-Left = 08 + 02 = 0A
 | 0x06 | Sick | |
 | 0x07 | Poison | |
 | | | Unlike the other statuses which need the panel to be refreshed to update, setting to 0x08 or 0x09 will immediately display the status icon beside whatever status you currently are |
-| 0x08 | Puts red dude sprite next to status | ![Red dude sprite](images/Juvei-Quest/juvei-condition-0x08.png) |
+| 0x08 | Puts "Numb" sprite next to status | ![Numb sprite](images/Juvei-Quest/juvei-condition-0x08.png) |
 | 0x09 | Puts ghost sprite next to status | ![Ghost sprite](images/Juvei-Quest/juvei-condition-0x09.png) |
 | | | The rest are invalid status bytes |
 | 0x0A | 0x0A and on appear to all be corrupted statuses | ![Corrupted status](images/Juvei-Quest/juvei-condition-0x0A.png) ![Corrupted status](images/Juvei-Quest/juvei-condition-0x0B.png)
