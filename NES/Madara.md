@@ -37,9 +37,41 @@ These are strangely not listed in memory in the same order they are in the stats
 |  0627   | Team slot 4 Charm |
 
 #### HP:
+
+*Note: These all follow the same formula: HP = (Byte2 Value * 256) + Byte1 Value   
+```
+Exmple:
+If 0638 is 0C [12 decimal] and 0639 is 04, current health is:  
+(4*256) + 12  
+= 1024 + 12  
+= 1036 HP
+```
+  *Note: Any values beyond `0F 27` (9999) cause an overflow and don't display properly.
+
 | Address | Modifies | Notes  |
 |   ---   |    ---   |   ---  |
-| 0638-0639 | Team slot 1 Current  | 0639 = 256*value, 0638 = amount past 0639 ie: 257hp would be 01 01 (01 past 256)
+| 0638-0639 | Team slot 1 Current HP |
+| 063A-063B | Team slot 2 Current HP |
+| 063C-063D | Team slot 3 Current HP |
+| 063E-063F | Team slot 4 Current HP |
+| 0640-0641 | Team slot 1 Max HP     |
+| 0642-0643 | Team slot 2 Max HP     |
+| 0644-0645 | Team slot 3 Max HP     |
+| 0646-0647 | Team slot 4 Max HP     |
+
+### MP:
+*Note: Follows the same rule as HP
+
+| Address | Modifies | Notes  |
+|   ---   |    ---   |   ---  |
+| 0648-0649 | Team slot 1 Current MP |
+| 064A-064B | Team slot 2 Current MP |
+| 064C-064D | Team slot 3 Current MP |
+| 064E-064F | Team slot 4 Current MP |
+| 0650-0651 | Team slot 1 Max MP     |
+| 0652-0653 | Team slot 2 Max MP     |
+| 0654-0655 | Team slot 3 Max MP     |
+| 0656-0657 | Team slot 4 Max MP     |
 
 
 ## Notes:
