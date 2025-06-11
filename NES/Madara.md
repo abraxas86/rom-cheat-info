@@ -70,15 +70,20 @@
 | 0656–0657 | Team slot 4 Max MP     |       |
 
 
-### Inventory
+### Inventory (Belt)
 
 > Item slots appear to store item bytes from the item table below.
 
-| Address | Modifies           | Notes |
-|---------|--------------------|-------|
-| 0680    | Belt Slot 1        |       |
-| 0681    | Team slot 1 Helmet |       |
-
+| Address | Modifies           |
+|---------|--------------------|
+| 0680    | Team 1 Belt Slot 1 |
+| 0681    | Team 1 Belt Slot 2 |
+| 0682    | Team 1 Belt Slot 3 |
+| 0683    | Team 1 Belt Slot 4 |
+| 0684    | Team 1 Belt Slot 5 |
+| 0685    | Team 1 Belt Slot 6 |
+| 0686    | Team 1 Belt Slot 7 |
+| 0687    | Team 1 Belt Slot 8 |
 
 ## Items
 
