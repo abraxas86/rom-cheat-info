@@ -162,45 +162,23 @@
 
 > Note: These appear in the "Items" section, not in your belt.
 
-| Byte | Item             |
-|-------|-----------------|
-| 5A    | Bat Key         |
-| 5B    | Ear Key         |
-| 5C    | Blue Key        |
-| 5D    | Red Key         |
-| 5E    | Desert Key      |
-| 5F    | Wolf Key        |
-| 60    | Kekkaju         |
-| 61    | Orochi Orb      |
-| 62    | Abyss Map       |
-| 63    | Mark of Cain    |
-| 64    | Signed Permit   |
-| 65    | Champ Medal     |
-| 66    | Empty (glitch)  |
-| 67    | Peg Leg         |
-| 69    | Barrier Jinx    |
-| 6A    | Empty (glitch)  |
-| 6B    | Long glitched name |
-| 6C    | Same as 6B      |
-| 6D    | Blessed Salt    |
-| 6E    | Crystal Powder  |
-| 6F    | Tao Braid       |
-| 70    | Rations         |
-| 71    | Signal Flute    |
-| 72    | Psalm of Nine   |
-| 73    | Agartha Ring    |
-| 74    | Eternal Flame   |
-| 75    | Shadow Pot      |
-| 76    | Precious Bell   |
-| 77    | Pond Key        |
-| 78    | Empty (glitch)  |
-| 79    | Black Key       |
-| 7A    | Crimson Key     |
-| 7B    | Light Green Key |
-| 7C    | Moki Key        |
-| 7D    | Purple Key      |
-| 7E    | Empty (glitch)  |
-| 7F    | Empty (glitch)  |
+### Key Items
+
+| Byte | Item           || Byte | Item           || Byte | Item            |
+|------|----------------||------|----------------||------|-----------------|
+| 5A   | Bat Key        || 67   | Peg Leg        || 74   | Eternal Flame   |
+| 5B   | Ear Key        || 68   | Barrier Jinx   || 75   | Shadow Pot      |
+| 5C   | Blue Key       || 69   | Empty (Glitch) || 76   | Precious Bell   |
+| 5D   | Red Key        || 6A   | Silver Staff   || 77   | Pond Key        |
+| 5E   | Desert Key     || 6B   | Long glitched  || 78   | Empty (Glitch)  |
+| 5F   | Wolf Key       || 6C   | Same as 6B     || 79   | Black Key       |
+| 60   | Kekkaju        || 6D   | Blessed Salt   || 7A   | Crimson Key     |
+| 61   | Orochi Orb     || 6E   | Crystal Powder || 7B   | Light Green Key |
+| 62   | Abyss Map      || 6F   | Tao Braid      || 7C   | Moki Key        |
+| 63   | Mark of Cain   || 70   | Rations        || 7D   | Purple Key      |
+| 64   | Signed Permit  || 71   | Signal Flute   || 7E   | Empty (Glitch)  |
+| 65   | Champ Medal    || 72   | Psalm of Nine  || 7F   | Empty (Glitch)  |
+| 66   | Empty (Glitch) || 73   | Agartha Ring   || FF   | Empty Slot      |
 
 > Note: Items wrap from 80 to FE.
 
