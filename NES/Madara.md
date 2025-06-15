@@ -135,10 +135,10 @@
 | Byte | Description                                                                 |
 |------|-----------------------------------------------------------------------------|
 | 3F   | Appears as an empty line. It can be selected but not used/equipped; selling causes overflow, breaks the game until reset. Don't save after. |
-| 66   | Same as above                                                              |
-| 6A   | Same as above                                                              |
-| 6B   | Shows as long glitched string; unusable, selling crashes the game.        |
-| 6C   | Same as 6B                                                                |
+| 66   | Same as above                                                               |
+| 6A   | Same as above                                                               |
+| 6B   | Shows as long glitched string; unusable, selling crashes the game.          |
+| 6C   | Same as 6B                                                                  |
 
 ### Consumables
 
@@ -150,13 +150,13 @@
 | 43   | Green Soma        | Cures Numb                   |   | 50   | Calm Flute       | Casts "Silence"                  |
 | 44   | Purple Soma       | Cures Lure                   |   | 51   | Brahman Eye      | Stops falling into pits          |
 | 45   | Pale Soma         | Restores HP & MP             |   | 52   | Crystal Ball     | Increases HP recovery rate       |
-| 46   | Brown Soma        | Cures Blindness              |   | 53   | Mahni Flame      | Curses curses                   |
-| 47   | White Soma        | Resurrects & fills HP & MP  |   | 54   | Cobr Fang        | Casts "Poison Fang"              |
+| 46   | Brown Soma        | Cures Blindness              |   | 53   | Mahni Flame      | Curses curses                    |
+| 47   | White Soma        | Resurrects & fills HP & MP   |   | 54   | Cobra Fang       | Casts "Poison Fang"              |
 | 48   | BaramonBracelet   | Refills HP and MP            |   | 55   | Tornado Seed     | Casts "Tornado"                  |
 | 49   | Battle Gadgets    |                              |   | 56   | Trick Vision     | Casts "Black Mist"               |
-| 4A   | Sazanami          |                              |   | 57   | Invisible Chain  | Casts "Tied"                    |
+| 4A   | Sazanami          |                              |   | 57   | Invisible Chain  | Casts "Tied"                     |
 | 4B   | Kabbalah Scroll   | Casts "Silence"              |   | 58   | Wind Seal        | Escape from Battle               |
-| 4C   | Gold Beetle       | Halves enemy speed           |   |      |                  |                                |
+| 4C   | Gold Beetle       | Halves enemy speed           |   |      |                  |                                  |
 
 ### Junk Item?
 | Byte | Item    | Description                                  |
@@ -187,6 +187,6 @@
 
 > Note: Items wrap from 80 to FE.
 
-| Byte | Description              |
+| Byte | Description               |
 |-------|--------------------------|
 | FF    | Empty Slot (consuming an item shifts inventory left by 1 byte and sets last address to FF) |
