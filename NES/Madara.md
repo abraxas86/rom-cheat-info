@@ -87,49 +87,53 @@
 
 ## Items
 
-### Weapons
+### Equippables
+| Byte    | Swords          |   | Byte    | Swords       |   | Byte    | Swords           |
+| ------- | --------------- | - | ------- | ------------ | - | ------- | ---------------- |
+| 00 (80) | Kusanagi Blade  |   | 05 (85) | Kasumi Blade |   | 0A (8A) | Ashura Blade     |
+| 01 (81) | Light Kusanagi  |   | 06 (86) | Pope Blade   |   | 0B (8B) | Susano Blade     |
+| 02 (82) | Seiken Kusanagi |   | 07 (87) | Scion Blade  |   | 0C (8C) | Salamander Blade |
+| 03 (83) | Knife           |   | 08 (88) | Yasha Blade  |   | 0D (8D) | Karma Blade      |
+| 04 (84) | Sword           |   | 09 (89) | Myouo Blade  |   |         |                  |
 
-#### Swords
-| Byte | Swords           |   | Byte | Swords         |   | Byte | Swords           |
-|------|------------------|---|------|----------------|---|------|------------------|
-| 00   | Kusanagi Blade   |   | 05   | Kasumi Blade   |   | 0A   | Ashura Blade     |
-| 01   | Light Kusanagi   |   | 06   | Pope Blade     |   | 0B   | Susano Blade     |
-| 02   | Seiken Kusanagi  |   | 07   | Scion Blade    |   | 0C   | SalamanderBlade  |
-| 03   | Knife            |   | 08   | Yasha Blade    |   | 0D   | Karma Blade      |
-| 04   | Sword            |   | 09   | Myouo Blade    |   |      |                  |
 
 #### Axes / Spears / Bows
-| Byte | Axes             |   | Byte | Spears           |   | Byte | Bows            |
-|------|------------------|---|------|------------------|---|------|-----------------|
-| 0E   | Stone Axe        |   | 13   | Spear            |   | 18   | Bow             |
-| 0F   | Tomahawk         |   | 14   | Long Spear       |   | 19   | Big Bow         |
-| 10   | Kamaitachi Axe   |   | 15   | Kimon Spear      |   | 1A   | Furona Bow      |
-| 11   | Fuujin Axe       |   | 16   | Shidenkai Spear  |   | 1B   | Moai Bow        |
-| 12   | Raijin Axe       |   | 17   | MizumitamaSpear  |   | 1C   | Aszusa Bow      |
-|      |                  |   |      |                  |   | 1D   | Shiba Bow       |
+| Byte    | Axes           |   | Byte    | Spears           |   | Byte    | Bows       |
+| ------- | -------------- | - | ------- | ---------------- | - | ------- | ---------- |
+| 0E (8E) | Stone Axe      |   | 13 (93) | Spear            |   | 18 (98) | Bow        |
+| 0F (8F) | Tomahawk       |   | 14 (94) | Long Spear       |   | 19 (99) | Big Bow    |
+| 10 (90) | Kamaitachi Axe |   | 15 (95) | Kimon Spear      |   | 1A (9A) | Furona Bow |
+| 11 (91) | Fuujin Axe     |   | 16 (96) | Shidenkai Spear  |   | 1B (9B) | Moai Bow   |
+| 12 (92) | Raijin Axe     |   | 17 (97) | Mizumitama Spear |   | 1C (9C) | Aszusa Bow |
+|         |                |   |         |                  |   | 1D (9D) | Shiba Bow  |
+
 
 ### Armor & Suits
-| Byte | Armor            |   | Byte | Suits            |
-|------|------------------|---|------|------------------|
-| 1E   | Armor            |   | 25   | Rikio Suit       |
-| 1F   | Big Armor        |   | 26   | Kaio Suit        |
-| 20   | Kubira Armor     |   | 27   | Raio Suit        |
-| 21   | Shatra Armor     |   | 28   | Kouo Suit        |
-| 22   | Indra Armor      |   | 29   | Meio Suit        |
-| 23   | Bishamon Armor   |   | 2A   | Tenou Suit       |
-| 24   | Fudaraku Armor   |   | 2B   | True King Suit   |
+> To mark an item as equipped, use the value in the brackets when editing your inventory.
+
+| Byte     | Armor            |   | Byte     | Suits            |
+|----------|------------------|---|----------|------------------|
+| 1E (9E)  | Armor            |   | 25 (A5)  | Rikio Suit       |
+| 1F (9F)  | Big Armor        |   | 26 (A6)  | Kaio Suit        |
+| 20 (A0)  | Kubira Armor     |   | 27 (A7)  | Raio Suit        |
+| 21 (A1)  | Shatra Armor     |   | 28 (A8)  | Kouo Suit        |
+| 22 (A2)  | Indra Armor      |   | 29 (A9)  | Meio Suit        |
+| 23 (A3)  | Bishamon Armor   |   | 2A (AA)  | Tenou Suit       |
+| 24 (A4)  | Fudaraku Armor   |   | 2B (AB)  | True King Suit   |
+
 
 ### Cloth / Helmets / Shields
 
-| Byte | Cloth            |   | Byte | Helmets         |   | Byte | Shields         |
-|------|------------------|---|------|-----------------|---|------|-----------------|
-| 2C   | Traveler Cloth   |   | 33   | Helmet          |   | 39   | Shield          |
-| 2D   | Maiko Cloth      |   | 34   | Rubikon Helmet  |   | 3A   | Karida Shield   |
-| 2E   | Noble Cloth      |   | 35   | Mujakau Helmet  |   | 3B   | JudgementShield |
-| 2F   | Monarch Cloth    |   | 36   | Sahasu Helmet   |   | 3C   | Sukyura Shield  |
-| 30   | Cotton Mesh      |   | 37   | Amogu Helmet    |   | 3D   | Dragon Scale    |
-| 31   | Agartha Robe     |   | 38   | Ezekiel Helmet  |   | 3E   | Eternal Shield  |
-| 32   | Dark Cape        |   |      |                 |   | 3F   | Empty (glitch)  |
+| Byte    | Cloth          |   | Byte    | Helmets        |   | Byte    | Shields         |
+| ------- | -------------- | - | ------- | -------------- | - | ------- | --------------- |
+| 2C (AC) | Traveler Cloth |   | 33 (B3) | Helmet         |   | 39 (B9) | Shield          |
+| 2D (AD) | Maiko Cloth    |   | 34 (B4) | Rubikon Helmet |   | 3A (BA) | Karida Shield   |
+| 2E (AE) | Noble Cloth    |   | 35 (B5) | Mujakau Helmet |   | 3B (BB) | JudgementShield |
+| 2F (AF) | Monarch Cloth  |   | 36 (B6) | Sahasu Helmet  |   | 3C (BC) | Sukyura Shield  |
+| 30 (B0) | Cotton Mesh    |   | 37 (B7) | Amogu Helmet   |   | 3D (BD) | Dragon Scale    |
+| 31 (B1) | Agartha Robe   |   | 38 (B8) | Ezekiel Helmet |   | 3E (BE) | Eternal Shield  |
+| 32 (B2) | Dark Cape      |   |         |                |   | 3F (BF) | Empty (glitch)  |
+
 
 ### Invalid / Glitch Items
 | Byte | Description                                                                 |
