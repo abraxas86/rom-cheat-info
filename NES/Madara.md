@@ -71,18 +71,18 @@
 
 
 ### Inventory (Belt)
+> Item slots appear to store item bytes from the item tables below
 
-> Item slots appear to store item bytes from the item table below.
-| Address | Modifies           | Address | Modifies           | Address | Modifies           | Address | Modifies           |
-| ------- | ------------------ | ------- | ------------------ | ------- | ------------------ | ------- | ------------------ |
-| 0680    | Team 1 Belt Slot 1 | 0688    | Team 2 Belt Slot 1 | 0690    | Team 3 Belt Slot 1 | 0698    | Team 4 Belt Slot 1 |
-| 0681    | Team 1 Belt Slot 2 | 0689    | Team 2 Belt Slot 2 | 0691    | Team 3 Belt Slot 2 | 0699    | Team 4 Belt Slot 2 |
-| 0682    | Team 1 Belt Slot 3 | 068A    | Team 2 Belt Slot 3 | 0692    | Team 3 Belt Slot 3 | 069A    | Team 4 Belt Slot 3 |
-| 0683    | Team 1 Belt Slot 4 | 068B    | Team 2 Belt Slot 4 | 0693    | Team 3 Belt Slot 4 | 069B    | Team 4 Belt Slot 4 |
-| 0684    | Team 1 Belt Slot 5 | 068C    | Team 2 Belt Slot 5 | 0694    | Team 3 Belt Slot 5 | 069C    | Team 4 Belt Slot 5 |
-| 0685    | Team 1 Belt Slot 6 | 068D    | Team 2 Belt Slot 6 | 0695    | Team 3 Belt Slot 6 | 069D    | Team 4 Belt Slot 6 |
-| 0686    | Team 1 Belt Slot 7 | 068E    | Team 2 Belt Slot 7 | 0696    | Team 3 Belt Slot 7 | 069E    | Team 4 Belt Slot 7 |
-| 0687    | Team 1 Belt Slot 8 | 068F    | Team 2 Belt Slot 8 | 0697    | Team 3 Belt Slot 8 | 069F    | Team 4 Belt Slot 8 |
+| Address | Modifies      |   | Address | Modifies      |   | Address | Modifies      |   | Address | Modifies      |
+| ------- | ------------- | - | ------- | ------------- | - | ------- | ------------- | - | ------- | ------------- |
+| 0680    | Team 1 Slot 1 |   | 0688    | Team 2 Slot 1 |   | 0690    | Team 3 Slot 1 |   | 0698    | Team 4 Slot 1 |
+| 0681    | Team 1 Slot 2 |   | 0689    | Team 2 Slot 2 |   | 0691    | Team 3 Slot 2 |   | 0699    | Team 4 Slot 2 |
+| 0682    | Team 1 Slot 3 |   | 068A    | Team 2 Slot 3 |   | 0692    | Team 3 Slot 3 |   | 069A    | Team 4 Slot 3 |
+| 0683    | Team 1 Slot 4 |   | 068B    | Team 2 Slot 4 |   | 0693    | Team 3 Slot 4 |   | 069B    | Team 4 Slot 4 |
+| 0684    | Team 1 Slot 5 |   | 068C    | Team 2 Slot 5 |   | 0694    | Team 3 Slot 5 |   | 069C    | Team 4 Slot 5 |
+| 0685    | Team 1 Slot 6 |   | 068D    | Team 2 Slot 6 |   | 0695    | Team 3 Slot 6 |   | 069D    | Team 4 Slot 6 |
+| 0686    | Team 1 Slot 7 |   | 068E    | Team 2 Slot 7 |   | 0696    | Team 3 Slot 7 |   | 069E    | Team 4 Slot 7 |
+| 0687    | Team 1 Slot 8 |   | 068F    | Team 2 Slot 8 |   | 0697    | Team 3 Slot 8 |   | 069F    | Team 4 Slot 8 |
 
 
 ## Items
