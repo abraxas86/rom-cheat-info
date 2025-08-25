@@ -1,5 +1,8 @@
 # Madara (Mouryou Senki Madara)
 
+Note: My copy of the game was patched using the English translation by Aeon Genesis.
+
+
 ### Gold (coins/money, it goes by a few names)
 | Address   | Modifies                               |
 |-----------|----------------------------------------|
