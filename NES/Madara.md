@@ -88,6 +88,10 @@
 ## Items
 
 ### Equippables
+> To mark an item as equipped, use the value in the brackets when editing your inventory.
+
+# Swords/Blades
+
 | Byte    | Swords          |   | Byte    | Swords       |   | Byte    | Swords           |
 | ------- | --------------- | - | ------- | ------------ | - | ------- | ---------------- |
 | 00 (80) | Kusanagi Blade  |   | 05 (85) | Kasumi Blade |   | 0A (8A) | Ashura Blade     |
@@ -109,7 +113,6 @@
 
 
 ### Armor & Suits
-> To mark an item as equipped, use the value in the brackets when editing your inventory.
 
 | Byte     | Armor            |   | Byte     | Suits            |
 |----------|------------------|---|----------|------------------|
