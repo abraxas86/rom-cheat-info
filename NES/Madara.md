@@ -88,7 +88,7 @@
 ## Items
 
 ### Equippables
-> To mark an item as equipped, use the value in the brackets when editing your inventory.
+> Equopped items use the number in brackets in the tables below. Note that injecting these values into the belt slots will not apply the item stats. You will need to unequip/equip the item to get the stat buffs. This means you can't equip invalid items to classes that can't handle them - you also won't be able to unequip them unless you drop the item or manually edit the memory address
 
 # Swords/Blades
 
