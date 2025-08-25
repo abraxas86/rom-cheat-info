@@ -1,5 +1,10 @@
 # Madara (Mouryou Senki Madara)
 
+### Gold (coins/money, it goes by a few names)
+| Address   | Modifies                               |
+|-----------|----------------------------------------|
+| 06A0-06A2 | Modifies money in hand (Little-endian) |
+
 ## Character Stats
 
 > **Note:** These stats are **not** laid out in memory in the same order as the in-game stats screen.
