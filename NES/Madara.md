@@ -205,3 +205,10 @@ Note: My copy of the game was patched using the English translation by Aeon Gene
 | Byte | Description               |
 |-------|--------------------------|
 | FF    | Empty Slot (consuming an item shifts inventory left by 1 byte and sets last address to FF) |
+
+
+-----------------
+
+# To Do:
+
+- Figure out what happens to party members when you ditch them at the Inn.  This might make it easier to pre-emptively modify character stats
